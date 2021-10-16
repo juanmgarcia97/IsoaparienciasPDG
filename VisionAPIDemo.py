@@ -4,6 +4,10 @@ from google.cloud import vision
 from google.cloud.vision_v1 import types
 import pandas as pd
 
+#para instalar la api de google y pandas se debe usar los siguientes comandos desde poweshell (estando dentro del proyecto python): 
+# py -m pip install google.cloud.vision
+# py -m pip install pandas
+
 os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = r'ServiceToken.json'
 client = vision.ImageAnnotatorClient()
 
