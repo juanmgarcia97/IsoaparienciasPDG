@@ -1,14 +1,30 @@
 from tkinter import *
-from tkinter import filedialog, ttk
+from tkinter import filedialog, ttk, messagebox
 from PIL import ImageTk, Image
 import os
-import VisionAPIDemo as api
+import cv2
+import VisionAPIDemo as apiText
+import VisionAPIForms as apiImg
 
 # Creación de la pantalla principal de la aplicación.
 root = Tk()
 root.title('Isoapariencias de medicamentos inyectables')
-root.geometry("500x400")
 root.iconbitmap(r'Images/icons8-capsule-64.ico')
+root.geometry("500x400")
+
+# Aquí estoy intentando que la aplicación se abra en la mitad de la pantalla
+# app_width = 500
+# app_height = 500
+
+# screen_width = root.winfo_width()
+# screen_height = root.winfo_height()
+# print(screen_width)
+# print(screen_height)
+
+# x = (screen_width / 2) - (app_width / 2)
+# y = (screen_height / 2) - (app_height / 2)
+
+# root.geometry(f'{app_width}x{app_height}+{int(x)}+{int(y)}')
 
 # Creación de marco para encerrar los botones principales.
 frame = LabelFrame(root, padx=2, pady=2)
@@ -38,20 +54,42 @@ def openFile():
     image_label.pack()
     image_label.image = uploaded_image
 
-# Método para buscar las isoapariencias usando la imagen cargada.
+# Método para buscar las similitudes en los textos usando la imagen cargada.
 
 
-def findIso():
-    data = api.processImage(filename)[0]
-    labelData = Label(resultIso, text=data)
-    labelData.pack()
+def findIsoText():
+    try:
+        data = apiText.processImage(filename)[0]
+        labelData = Label(resultIso, text=data)
+        labelData.pack()
+    except:
+        messagebox.showerror("Sin imagen", "¡Debes cargar una imagen primero!")
+
+# Método para buscar las similitudes en las imágenes usando dos imágenes cargadas.
+
+
+def findIsoImg():
+    try:
+        filename1, filename2 = filedialog.askopenfilenames(
+            title="Seleccionar 2 imágenes")
+        data = apiImg.findIsoappearances(
+            filename1=filename1, filename2=filename2)
+        image = cv2.imshow("", data)
+        labelData = Label(resultIso, image=image)
+        labelData.pack()
+    except:
+        messagebox.showerror(
+            "Sin imágenes", "¡Debes cargar dos imágenes para seguir!")
+
 
 # Método para eliminar la(s) imagen(es) cargada(s).
 
 
 def deleteImage():
-    imageIso.destroy()
-
+    try:
+        imageIso.destroy()
+    except:
+        messagebox.showinfo("Error al eliminar", "¡No hay nada para eliminar!")
 # Método para abrir nueva ventana para elegir botella.
 
 
@@ -66,7 +104,11 @@ def openWindow():
     combo.pack()
     comboType = ttk.Combobox(newWindow)
     comboType['state'] = "readonly"
-    comboType.bind("<<ComboboxSelected>>", selectImage)
+    try:
+        comboType.bind("<<ComboboxSelected>>", selectImage)
+    except:
+        messagebox.showinfo(
+            "Sin imágenes", "No hay imágenes disponibles en el momento.")
     comboType.pack()
     print(list)
 
@@ -83,7 +125,7 @@ def pickBottle(event):
 def selectImage(event):
     newWindow.destroy()
     image_name = comboType.get()
-    data = api.processImage(path + image_name)[0]
+    data = apiText.processImage(path + image_name)[0]
     labelData = Label(resultIso, text=data)
     labelData.pack()
 
@@ -95,8 +137,10 @@ chose_med = Button(frame, text="Elegir botella",
                    command=openWindow).grid(row=2, column=0)
 delete_image = Button(frame, text="Eliminar imagen",
                       command=deleteImage).grid(row=1, column=1)
-find_iso = Button(frame, text="Encontrar isoapariencias",
-                  command=findIso).grid(row=1, column=2)
+find_iso_text = Button(frame, text="Encontrar similitudes (texto)",
+                       command=findIsoText).grid(row=0, column=2)
+find_is_img = Button(frame, text="Encontrar similitudes (img)",
+                     command=findIsoImg).grid(row=2, column=2)
 gen_report = Button(frame, text="Generar reporte").grid(row=1, column=3)
 
 # Llamado de la ventana principal para que permanezca abierta mientras la aplicación está corriendo.
