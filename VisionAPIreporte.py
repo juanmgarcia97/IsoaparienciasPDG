@@ -18,7 +18,9 @@ client = vision.ImageAnnotatorClient()
 # FOLDER_PATH = r'C:\Users\juanm\Documents\ICESI\9no\Proyecto de Grado I\Proyecto\Codigo\GoogleVisionDemo\Images'
 
 # PATH DEL AMBIENTE LOCAL DE JOAN 
-FOLDER_PATH = r'C:\Users\Joan Colina\Desktop\miCosas\Semestre9\PDG\proyectoClonado\IsoaparienciasPDG\Images\Agua'
+# FOLDER_PATH = r'C:\Users\Joan Colina\Desktop\miCosas\Semestre9\PDG\proyectoClonado\IsoaparienciasPDG\Images\Agua'
+
+FOLDER_PATH = r'Images/Agua'
 
 
 
@@ -42,8 +44,9 @@ for x in range(number_files):
     EXCEL_POSITION_IMAGE_NAME="B"+str(excel_cell)
     EXCEL_POSITION_IMAGE_PATH="C"+str(excel_cell)
     excel_cell=excel_cell+1
-    IMAGE_FILE = "Agua"+str(x)+".JPG"
-    FILE_PATH = os.path.join(FOLDER_PATH, IMAGE_FILE)
+    IMAGE_FILE = "_MG_"+str(x)+".JPG"
+    SCRIPT_DIR = os.path.dirname(__file__) + '\Images\Agua'
+    FILE_PATH = os.path.join(SCRIPT_DIR, IMAGE_FILE)
     with io.open(FILE_PATH, 'rb') as image_file:
         content = image_file.read()
 
@@ -51,13 +54,19 @@ for x in range(number_files):
     response = client.document_text_detection(image=image)
     docText = response.full_text_annotation.text
 
+    texts = docText.split('\n')
+    finalText = ''
+
+    for text in texts:
+        finalText = finalText + text + ';'
+
     currentCell = hoja[EXCEL_POSITION_GOOGLE_VISION]
     currentCell.alignment = Alignment(horizontal='center',vertical='center')
     currentCell = hoja[EXCEL_POSITION_IMAGE_NAME]
     currentCell.alignment = Alignment(horizontal='center',vertical='center')
     currentCell = hoja[EXCEL_POSITION_IMAGE_PATH]
     currentCell.alignment = Alignment(horizontal='center',vertical='center')
-    hoja[EXCEL_POSITION_GOOGLE_VISION] = docText
+    hoja[EXCEL_POSITION_GOOGLE_VISION] = finalText
     hoja[EXCEL_POSITION_IMAGE_NAME] = IMAGE_FILE
     hoja[EXCEL_POSITION_IMAGE_PATH] = FILE_PATH
     
