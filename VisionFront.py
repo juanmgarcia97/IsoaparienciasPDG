@@ -58,9 +58,38 @@ def openFile():
 
 
 def findIsoText():
+    global better_image
     try:
         data = apiText.processImage(filename)[0]
-        labelData = Label(resultIso, text=data)
+
+
+        hm = HashMap()
+        values = []
+
+        with open('truthText.txt') as f:
+            lines = f.readlines()
+
+            # array = lines.split('\n')
+            for i in lines:
+                arr = i.split('(****)')
+                img_name = arr[1].rstrip()
+                hm.put(apiText.comparisonStrings(data, arr[0]), img_name)
+                values.append(apiText.comparisonStrings(data, arr[0]))
+            
+            # values = cv2.sort(values)
+            values.sort(reverse=True)
+
+        result_values, image_names = apiText.findGreaterValues(values, hm)
+        better_image = os.path.join(os.path.dirname(__file__) + '\Images\Agua' , image_names[0])
+        for image in image_names:
+            general_path = os.path.dirname(__file__) + '\Images\Agua' 
+            image_path = os.path.join(general_path, image.split(':')[0])
+            # print(image.split(' ')[0])
+            # img = ImageTk.PhotoImage(Image.open(image_path).resize([200, 300]))
+            # img_label = Label(resultIso, image=img)
+            # img_label.image = img
+            # img_label.pack()
+        labelData = Label(resultIso, text=result_values)
         labelData.pack()
     except:
         messagebox.showerror("Sin imagen", "¡Debes cargar una imagen primero!")
@@ -70,10 +99,9 @@ def findIsoText():
 
 def findIsoImg():
     try:
-        filename1, filename2 = filedialog.askopenfilenames(
-            title="Seleccionar 2 imágenes")
+        
         data = apiImg.findIsoappearances(
-            filename1=filename1, filename2=filename2)
+            filename1=filename, filename2=better_image)
         image = cv2.imshow("", data)
         labelData = Label(resultIso, image=image)
         labelData.pack()
@@ -143,5 +171,48 @@ find_is_img = Button(frame, text="Encontrar similitudes (img)",
                      command=findIsoImg).grid(row=2, column=2)
 gen_report = Button(frame, text="Generar reporte").grid(row=1, column=3)
 
+# https://stackoverflow.com/questions/8703496/hash-map-in-python
+
+class Node:
+    def __init__(self, key, value):
+        self.key = key
+        self.value = value
+        self.next = None
+
+class HashMap:
+    def __init__(self):
+        self.store = [None for _ in range(16)]
+    def get(self, key):
+        index = hash(key) & 15
+        if self.store[index] is None:
+            return None
+        n = self.store[index]
+        while True:
+            if n.key == key:
+                return n.value
+            else:
+                if n.next:
+                    n = n.next
+                else:
+                    return None
+    def put(self, key, value):
+        nd = Node(key, value)
+        index = hash(key) & 15
+        n = self.store[index]
+        if n is None:
+            self.store[index] = nd
+        else:
+            if n.key == key:
+                n.value = value
+            else:
+                while n.next:
+                    if n.key == key:
+                        n.value = value
+                        return
+                    else:
+                        n = n.next
+                n.next = nd
+
 # Llamado de la ventana principal para que permanezca abierta mientras la aplicación está corriendo.
 root.mainloop()
+

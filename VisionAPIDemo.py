@@ -1,3 +1,4 @@
+from difflib import SequenceMatcher
 import os
 import io
 from google.cloud import vision
@@ -23,7 +24,8 @@ def processImage(file_path):
     response = client.document_text_detection(image=image)
 
     docText = response.full_text_annotation.text
-    return docText, response
+    finalText = refactorText(docText)
+    return finalText, response
 
 def processImageAllData(file_path):
     pages = processImage(file_path)[1].pages
@@ -43,3 +45,18 @@ def processImageAllData(file_path):
                     for symbol in word.symbols:
                         print('\tSymbol: {0} (confidence: {1}'.format(
                             symbol.text, symbol.confidence))
+
+def refactorText(data):
+    texts = data.split('\n')
+    finalText = ''
+
+    for text in texts:
+        finalText = finalText + text + ';'
+    return finalText
+
+def comparisonStrings(straingA, stringB):
+    return SequenceMatcher(None, straingA, stringB).ratio()
+
+def findGreaterValues(values, hashMap):
+    response = hashMap.get(values[0]) + ": " + str(values[0]) + "\n" + hashMap.get(values[1])+": "+ str(values[1]) + "\n"+ hashMap.get(values[2])+": "+ str(values[2])
+    return response, [hashMap.get(values[0]), hashMap.get(values[1]), hashMap.get(values[2])]
