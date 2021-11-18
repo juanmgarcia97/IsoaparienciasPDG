@@ -10,7 +10,7 @@ import VisionAPIForms as apiImg
 root = Tk()
 root.title('Isoapariencias de medicamentos inyectables')
 root.iconbitmap(r'Images/icons8-capsule-64.ico')
-root.geometry("500x400")
+root.geometry("500x600")
 
 # Aquí estoy intentando que la aplicación se abra en la mitad de la pantalla
 # app_width = 500
@@ -29,13 +29,6 @@ root.geometry("500x400")
 # Creación de marco para encerrar los botones principales.
 frame = LabelFrame(root, padx=2, pady=2)
 frame.pack(padx=2, pady=2)
-
-# Creación de marco para mostrar el resultado de Google Vision.
-resultIso = LabelFrame(root, padx=2, pady=2)
-resultIso.pack()
-
-bottle_types = ["Agua", "Jugo", "Gaseosa", "Té", "Malta",
-                "Lácteos", "Aceites", "Café", "Enjuague bucal", "Salsa", "Suero"]
 
 # Método para cargar una imagen y mostrarla en debajo del marco principal.
 
@@ -58,11 +51,14 @@ def openFile():
 
 
 def findIsoText():
-    global better_image
+    global better_image, resultIso
+    deleteResultIsoFrame()
+    # Creación de marco para mostrar el resultado de Google Vision.
+    resultIso = LabelFrame(root, padx=2, pady=2)
+    resultIso.pack()
+    labelData = Label(resultIso)
     try:
         data = apiText.processImage(filename)[0]
-
-
         hm = HashMap()
         values = []
 
@@ -80,23 +76,28 @@ def findIsoText():
             values.sort(reverse=True)
 
         result_values, image_names = apiText.findGreaterValues(values, hm)
-        better_image = os.path.join(os.path.dirname(__file__) + '\Images\Agua' , image_names[0])
+        better_image = os.path.join(os.path.dirname(__file__) + '\Images' , image_names[0])
         for image in image_names:
-            general_path = os.path.dirname(__file__) + '\Images\Agua' 
+            general_path = os.path.dirname(__file__) + '\Images' 
             image_path = os.path.join(general_path, image.split(':')[0])
             # print(image.split(' ')[0])
             # img = ImageTk.PhotoImage(Image.open(image_path).resize([200, 300]))
             # img_label = Label(resultIso, image=img)
             # img_label.image = img
             # img_label.pack()
-        labelData = Label(resultIso, text=result_values)
+        labelData = Label(resultIso)
+        labelData.config(text=result_values)
         labelData.pack()
     except:
         messagebox.showerror("Sin imagen", "¡Debes cargar una imagen primero!")
 
+def deleteResultIsoFrame():
+    try:
+        resultIso.destroy()
+    except:
+        pass
+
 # Método para buscar las similitudes en las imágenes usando dos imágenes cargadas.
-
-
 def findIsoImg():
     try:
         
@@ -116,6 +117,7 @@ def findIsoImg():
 def deleteImage():
     try:
         imageIso.destroy()
+        resultIso.destroy()
     except:
         messagebox.showinfo("Error al eliminar", "¡No hay nada para eliminar!")
 # Método para abrir nueva ventana para elegir botella.
@@ -144,10 +146,9 @@ def openWindow():
 # Método para asignar las imágenes disponibles según el tipo de botella.
 def pickBottle(event):
     global path
-    if combo.get() == 'Agua':
-        path = r'Images/Agua'
-        list = os.listdir(path)
-        comboType.config(values=list)
+    path = r'Images'
+    list = os.listdir(path)
+    comboType.config(values=list)
 
 
 def selectImage(event):
