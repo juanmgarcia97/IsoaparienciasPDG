@@ -8,8 +8,7 @@
 30;300;MILILITROS;NO RETORNARE;CANADA;DRY;Ginger Ale;Bebida Gaseosa Sabor a Gial;Contenido Neto;NO RETORIKA;;(****)_MG_7.jpg
 *;23;20;1125;33;X;gua;(;tabla nutridora;INFORMACIÓN NUTRICIO;Tamaño por porción 1 120;contiene 1 porción;33;samente;aicada;30;Carrefour;Kids;Cantidad por porción;Calorias 0 kcal;frutal;Grasa Total Og;Sodio 10mg;Carbohidrato Total og;Azúcares og;Proteina og;250 ml;*El porcentaje del Valytuvat;una dieta de 2000 calor;;(****)_MG_8.jpg
 3;22;23;33;23;Con VITAMINAS AD0B3BCB12;Una botella;250 ml contiene;CALORIAS;100 kcal;5%;2000 calorias;nh;X en base;Bebida con jugo;De Naranja;contenido nelo;250ml;8331 oz;Beverage with orange juice;CON PULPANATURAL;JARINICIALES;SINISABOR;;(****)_MG_9.jpg
-*;23;3;601180 & 3043;S18001-SIZED;13;33;Chaitea;GREEN TEA;& ALOE VERA;LEMON;IMPORTADO;ALMACENESE;Carrera 48 No. 328;TEL: 339 66;Envigado - Ani;Colombia;TEA;EL 
-NEBO;340;ml;(11.5 FL oz);;(****)_MG_10.jpg
+*;23;3;601180 & 3043;S18001-SIZED;13;33;Chaitea;GREEN TEA;& ALOE VERA;LEMON;IMPORTADO;ALMACENESE;Carrera 48 No. 328;TEL: 339 66;Envigado - Ani;Colombia;TEA;EL NEBO;340;ml;(11.5 FL oz);;(****)_MG_10.jpg
 3;Mora;33;Chi;30;CON;GAS;8%;de Pulpa;de Fruta;Natural;Cont. Neto;Net Contents;500 ml;(16,66 A 02);REFRESCO DE FRUTA CARBONATADO VARIEDAD MORA;CON JUGO DE FRUTA NATURAL;;(****)_MG_11.jpg
 **;23;-;15926 2018 B;30;deliziare;-;Salsa;SABOR;Bolognese;falle;PEIP7PPIPPS;ITA;Pew Neto;400g;;(****)_MG_12.jpg
 L: FU:05/10;RTD 09:59;Sabor Tropical;de la grasa o;Tel Diario;0%;•;8 G;drink;SSSS;Bebida Hidratante Energética;Contenido Neto;600 ml;33;33;;(****)_MG_13.jpg
@@ -24,8 +23,7 @@ FINO;ACEITE DE;SOYA - GIRASOL;NATURALMENTE;LIBRE DE;COLESTEROL;NATURAL;Y NUTRITI
 GE;Lalalala;;(****)_MG_22.jpg
 ENE 13 MDC1;LOTE 15;VENCE 15 ABR 13;07:46;Carulla;Refresco;de Agua;Sabor a;CONTENIDO NETO;Vandanna m;30;;(****)_MG_23.jpg
 .;III;;(****)_MG_24.jpg
-BALI;La;Max;tur;ber;les;SPEED;I;Carrera 70;28288296928;I Calle 30;CONTENIDO NETO;BEBIDA GASIFICADA CON;VITAMINAS Y CAFEÍNA;SABOR A COLA Y FRUTOS ROJOS 8,33 oz 
-fl;250ml;;(****)_MG_25.jpg
+BALI;La;Max;tur;ber;les;SPEED;I;Carrera 70;28288296928;I Calle 30;CONTENIDO NETO;BEBIDA GASIFICADA CON;VITAMINAS Y CAFEÍNA;SABOR A COLA Y FRUTOS ROJOS 8,33 oz fl;250ml;;(****)_MG_25.jpg
 (15/09/2014;151373;;(****)_MG_26.jpg
 33;SAN BENEDETTO;histettu Italiassa:;Acqua Minerale;de stabilimento: Viale;SENEDETTO;BENTE ANTES DE Y;PA I PARASTA ENNEN:;ER OCH BÄST FÖRE:;Th;IN ACQUA MINERALE;NATURALE;Imericana D, CA;307397756 - Regis;J.Contenido Neto;Cie SA - Guayaquil;Sar: 4708-1NHG-A-;55-80 km 15 V;be P-52 18767110;Metas 200 metros;neca San Fran;ale 7217-3600;rado en Mexico por;807 B-1 Las;Put Werico RFC;en lugar seco y fresco.;Vad;GREEN;TEA;;(****)_MG_27.jpg
 2;23;23;23;OU QURA FRUTA";13;California;Néctar;30;Durazno;Pasteurizado;Peach nectar;Contenido Neto;215 ml;Contiene el 28% de Fruta;Néctar de Frutas pasteurizado pazitebis;;(****)_MG_28.jpg
@@ -51,7 +49,7 @@ ORLEN;0941544;AGUA PERRIER x 500 m;AL 35;$ 5100;14$;10.20 X mi;23/01/2013 01;bal
 23;Bebia;Ingrediens;eistee;ECCE;Lunden;TE HELADO;Fabrica;BA;SASA;Limón;COSE;Bebida de Té con;sabor a Limon;Core;Neto;400m;;(****)_MG_48.jpg
 SV;Agua Mineral Natural;500 ml.;PAMPER;Parrilla Argentina;B/ Granada;Acopi Yumbo B/La Hace;Calle 21N # 9-17;Gra 32 A # 10-55 Gra 70#2;Tel: 6613117;Tel: 6905159;www.pamperoparrillaargentina.com;Tel: 379;;(****)_MG_49.jpg
 20;30;33;32;taeg);Modo Koda;OC;Contenido Neto;500m;Agua potable;tratade;;(****)_MG_50.jpg
-10191;Babica Hidratante;jergética;Sport Drink;Ⓡ;Na;CIL;K;பொடா;33;Sabora;Naranja;Orange;Flavored;L;;(****)_MG_51.jpg
+10191;Babica Hidratante;jergética;Sport Drink;;Na;CIL;K;33;Sabora;Naranja;Orange;Flavored;L;;(****)_MG_51.jpg
 ا;;(****)_MG_52.jpg
 ";7709"9938;ENVASE NO RETORNABLE;Coca Cola Colombia;Dale la;vuelta;cal;);280 ml;REFRESCO DE AGUA;SABORIZADA CON GAS;SABOR LIMA-LIMON;"TT;;(****)_MG_53.jpg
 DE;33;30;kante Girasol;kurimeste libre;Rico en Omega6;Grasa Polinsaturód;Naturalmente Line;de Grace tres;OLEOCALI;Y00%GWāsot;Su aceite de confianza;30;3000;500 cm3;;(****)_MG_54.jpg
@@ -64,11 +62,10 @@ Melto;23;Olivetto;3;Aceite de Oliva;3;EXTRA;VIRGEN;S U A V E;408675;PRIMERA PREN
 I Milover;PUSLARI;opuru;sa lojas de;1 mejor;.;utricional;KO;8%;%;E;AUDIO;Nutricional;OR;Contenido Neto 500 ml;Terra;Lipton;Durazno;con Sabor a;Bebida de Té;CREDIENTES: Aoun. Extracto de Té Negro, Anicar (edulcoranto). Acido Chico Medo decir concentrado de jugo de Durazno;Saborizante Natural). Sabor a Durazno entico al natural Saborizante Arancio), Acido Pecorbico Antioxidanto).;A Sanitario;vertente per;come par les cocho 371 oficina 1801. San Isidro Lima,;PEP;21512508;**;;(****)_MG_61.jpg
 whale;03;23;2;She;32;ENSADO;CO-;PRESSED;PINO + hierbabuena;DETOX REFRESCANTE;100% PINANMIERBA BUNA;450m;;(****)_MG_62.jpg
 Aloe yogurt Drink;3;T'best;33;TM;with;30;Aloei;Yogurt;Original;taste;great;(taste;Alesanal;The Excellent Company;Brand of Seoul;Aloe Yogurt Drink;NATURALLY FLAVORED. NO PRESERVATIVES;16.9 FL OZ. 500 ML;;(****)_MG_63.jpg
-ist Stuff on Earth: Made from;3;formación Nutricional;LEMON TEA;bora limon (Blend of juice;some with other natural;fenotonuricos contiene;a fituada, ácido cítrico;edulcorante artificial;trato de potasio;tores naturales a limón;diet;horcon 1 botela (473ml);vase 1;portion;ng;Valor Diario;LOW CLONE;0%;1%;0%;0%;MADE FROM;GREEN&;BLACK;glasiva de Calorias de;urada. Grasa Trans.;To Dietaria, Azúcares,;vana Calcio y Herro;del Valor Dietario están;dela da 2000 calorias;SNAPPLE BEVERAGE;Paneto Park Road, Sut;FL 33433 • Estados;e por Bebida Logistica;Via Steria PAO 1311;TEA LEAVES;ATRO SANITARIO INVIMA;RS/A13112210;logistica.com.co;8. MAY 
-2013;won elevase;Made from the;Best Stuff on Earth;;(****)_MG_64.jpg
+ist Stuff on Earth: Made from;3;formación Nutricional;LEMON TEA;bora limon (Blend of juice;some with other natural;fenotonuricos contiene;a fituada, ácido cítrico;edulcorante artificial;trato de potasio;tores naturales a limón;diet;horcon 1 botela (473ml);vase 1;portion;ng;Valor Diario;LOW CLONE;0%;1%;0%;0%;MADE FROM;GREEN&;BLACK;glasiva de Calorias de;urada. Grasa Trans.;To Dietaria, Azúcares,;vana Calcio y Herro;del Valor Dietario están;dela da 2000 calorias;SNAPPLE BEVERAGE;Paneto Park Road, Sut;FL 33433 • Estados;e por Bebida Logistica;Via Steria PAO 1311;TEA LEAVES;ATRO SANITARIO INVIMA;RS/A13112210;logistica.com.co;8. MAY 2013;won elevase;Made from the;Best Stuff on Earth;;(****)_MG_64.jpg
 3;San;forge;nécta;de Manza;220 ml;23% fruta en néctar;;(****)_MG_65.jpg
-OCT 13;藥;m233213;sumischenes.com;U7in;Dalla 18 No;Cre4 NO AR;30;0;.....................;;(****)_MG_66.jpg
-warblandadalananlardan daha;me olaroid;PESO NETO 500 01 (;REFRESCO;O;11日リリン;;(****)_MG_67.jpg
+OCT 13;m233213;sumischenes.com;U7in;Dalla 18 No;Cre4 NO AR;30;0;.....................;;(****)_MG_66.jpg
+warblandadalananlardan daha;me olaroid;PESO NETO 500 01 (;REFRESCO;O;11;;(****)_MG_67.jpg
 23;23;I EFGIZA 23;PEAK;Carga;Máxima;Contenido Neto/Wet cont;BEBIDA ENERGIZANTE CON;Cafeína, Taurina y Guarani;CONTENIDO ELEVADO DE CAFEÍNA;CAFFEINATED BEVERAGE WITH TAURINE ANO GUARANI;HIGH CAFFEINE CONTENT;280 m/19,3 61 oz;;(****)_MG_68.jpg
 .;186000173;30;HA;blandebaldeanlalalalalalalala;Max;CERESCO DE FRUTA;ASTERIZADO VARIEDAD MORA;DEBERRY JUICE DRINK;600 m 1000;;(****)_MG_69.jpg
 Da;23;23;33;0;33;30;Jara;RUNNIA;Sabor;a naranja zanahoria;Néctar de fruta;con fibra y prebiótico;Y;Cont. Neto 250 ml;Contiene 20% de Fruta;;(****)_MG_70.jpg
@@ -77,10 +74,8 @@ wala;;(****)_MG_72.jpg
 ;(****)_MG_73.jpg
 Agua potable tratada;600 m;Contenido Neth;ouois;KLIP;Fuente de via;;(****)_MG_74.jpg
 *;03;L2OMAR;23;0;ALE;Adicional;Con Vitam;A, Byg;citul;Al;Fruit Punch;(GRANADILLA, MARACUYA Y PINA;71707244561504;500 ml;REFRESCO DE AGUA;SABOR ARTIFICIAL;;(****)_MG_75.jpg
-23;!;Bebida Mista de Uva,;Maçã e Limão;indaiá;Agite Antes de Beber;Wall;Bed;OU;35153;Citrus;uva;Não deixe exposto a luz do so;kunnen woliante e sucos naturais 
-Conteudo 250ml;;(****)_MG_76.jpg
-2;Información Nutricional;Tamaño de kg Ivaso (240 ml;Porciones por envase Aprox. 2;Cantidad por porción;Calorias;60;UVE;G;GATORADE;PERFORMA;Grasa Total D;So 10 mg;0%;52;Proteina;No es una fuente significativa de Calorias;de Grasa Gasa Saturada, Grasa Trans;Colesterol, Fibra Dietaria Vitamina A;Vitamina D, Vitamina C 
-Calcio y Hierro.;"Las porcentajes de valores diarias;corresponden a una dieta de 2000 cl;30;nes;GATORADE;REBOA HIDRATANTE SABOR A;CONT NET;Seconomy;Cloruro 100 me;Potasios;Glucose;laridad;TROPICAL FRUIT 500 ml;33;32;;(****)_MG_77.jpg
+23;!;Bebida Mista de Uva,;Maçã e Limão;indaiá;Agite Antes de Beber;Wall;Bed;OU;35153;Citrus;uva;Não deixe exposto a luz do so;kunnen woliante e sucos naturais Conteudo 250ml;;(****)_MG_76.jpg
+2;Información Nutricional;Tamaño de kg Ivaso (240 ml;Porciones por envase Aprox. 2;Cantidad por porción;Calorias;60;UVE;G;GATORADE;PERFORMA;Grasa Total D;So 10 mg;0%;52;Proteina;No es una fuente significativa de Calorias;de Grasa Gasa Saturada, Grasa Trans;Colesterol, Fibra Dietaria Vitamina A;Vitamina D, Vitamina C Calcio y Hierro.;"Las porcentajes de valores diarias;corresponden a una dieta de 2000 cl;30;nes;GATORADE;REBOA HIDRATANTE SABOR A;CONT NET;Seconomy;Cloruro 100 me;Potasios;Glucose;laridad;TROPICAL FRUIT 500 ml;33;32;;(****)_MG_77.jpg
 De;EXP. 31.07.2016;09:32 L31012015;30%;de Aloe;Vera;SIN;Colorantes;Preservantes;icts;33;ving;0;ue;0%;0%;10%;0%;1%;3%;0%;Sabor Original;30;C;VERA;DRIN;mores;Tot;PREMIUM;Ilustración planta Aloe;Vera;Bebida con Aloe Vera;SABOR ORIGINAL;500 ml / 16.9 FL OZ;;(****)_MG_78.jpg
 Da;20;20;33;ale;30;PUTO;TAMPIC;CITRUS PUNCH;ALTO EN;VITAMINAC;Gruh;etra;CONT.NETO 220 ml;Abent;;(****)_MG_79.jpg
 il;porción;ona;Ide;ml;låport;300);6ca Cola;33;CALORÍAS;0 kcal;0%*;light;% en base a;2000 calorías;FI GASEOSA SIN CALORÍAS;300 m;;(****)_MG_80.jpg
@@ -98,8 +93,7 @@ Estat;ell;DRONOO;una botella;350 ml apo,;Coca-Cola Colombia;Premio;Rojo;350 ml;b
 कर;agua con;aloe;vera;33;sin gas;33;32;30;Carrefour;I;libre de;sodio;500 ml;;(****)_MG_92.jpg
 34 AGO 13 12:15;L4L11001825905;Speed;REST;TORONJA;NETO 600ml;BEBIDA GASEOSA SABOR A TORONJA;;(****)_MG_93.jpg
 36;16;60;la mano?;loma;personas;Soy;Late!;u cuerpo;tualegria;opulo;BURG;12;PURBALE;agua Premium • LIBRE, DE:8000 of;;(****)_MG_94.jpg
-*;ANALISIS;OU;Caloom 10;Mae;Po;evian;tulco!;Solidos;Dis;ARGENTINE;TE;N.;evian;RSAMA;Mind;CP;261-14570;DELICATA;CARF SITU;MPPS;Agua Natural de Manantial;de los 
-Alpes franceses;;(****)_MG_95.jpg
+*;ANALISIS;OU;Caloom 10;Mae;Po;evian;tulco!;Solidos;Dis;ARGENTINE;TE;N.;evian;RSAMA;Mind;CP;261-14570;DELICATA;CARF SITU;MPPS;Agua Natural de Manantial;de los Alpes franceses;;(****)_MG_95.jpg
 3;NECTAR DJUVA LUVA LUVA x 500;AL 35;0746456;L;$;2500;14 $;5.00;26/12/2012;х;03;Luva-luva;3;ten;NECTAR DE UVA;SABELLA;iSiente la UVA!;315 565 0205;i Colombiana;500 ml;Fabricado por: Love;Via Santa Elena-816;;(****)_MG_96.jpg
 Lindabbalanlardan dalaman;PNOURPL;;(****)_MG_97.jpg
 2;**;23;Premium Aloe Vera Drink;33;T'best;TM;13;60;ALOE;Lychee;taste;Conserver dans un endroit frais - Refrigérer après l'ouverture. Bien agiter avant de servir;Almacenar en un lugar fresco. Refrigere después;Store in a cool place - Refrigerate after opening Shelbrir. Agitarb;• Shake well before;ar bien antes de servir;GLUTEN FREE;Real;Aloe Pulp;Added;CLUTEN FREE;great;taste;2013;Hii;The Excellent Company;Brand of Seoul;Lychee;Aloe Vera Drink;Aloe Vera;Nam;OSCO;30%;NATURALLY FLAVORED. NO PRESERVATIVES;16.9 FL OZ. 500 ML;;(****)_MG_98.jpg
@@ -109,7 +103,7 @@ Lindabbalanlardan dalaman;PNOURPL;;(****)_MG_97.jpg
 23;50;Naranjada;Refrescante;Naturalmente;con vitamina C;;(****)_MG_102.jpg
 SAN BENEDETTO;BEBIDA DE TÉ COS;Ingredientes agai;acidulante doidot;melocoton;Th;my Bebida de Té;Helado Sabor;Melocoton Cont. Net 500 ml;op;;(****)_MG_103.jpg
 *;ID mere;ALL;POWER;ROOT OF;GINSENGUP;LEMON LIME;Ema;13HL;NATURAL PREMIUM GINSENG DRINK WITH CANS;when;10 OCT;THE ROOT OF ALL POWER;GINSENGUP;LEMON LIME;HOMESTYLE BLEND;OF LEMON AND LIME;12 FL. OZ.;(355ml);POWER;JOINT THI;;(****)_MG_104.jpg
-कर;a botellado;100% SABOR NATURAL;$1.300;'Precio Sugerido;*;lapora, CON;una;350 m/;GU;Sprite;350 ml a baada;BEBIDA GASEOSA;PE;;(****)_MG_105.jpg
+a botellado;100% SABOR NATURAL;$1.300;'Precio Sugerido;*;lapora, CON;una;350 m/;GU;Sprite;350 ml a baada;BEBIDA GASEOSA;PE;;(****)_MG_105.jpg
 23;Contenido;20%;13;Gerli;wa;Refresco tradicional japana;EBBE TETO;Breno para losdiod;Muchowa;;(****)_MG_106.jpg
 23;3;35;SAPPĖ.;Aloe Vera;e;Drink;BEBIDA CON ALOE VERA SABOR DURAZNO;32;3;Con Cubos De Aloe Vera;10.2 FL OZ( 300mL);02XFG:23 DCT 2012;EXP:23 OCT 2013;;(****)_MG_107.jpg
 *;23;30;3;30;500ml;GOSTO;w;INCA;KOLA;ey;DESDE 1935;Contenido Neto;;(****)_MG_108.jpg
@@ -151,11 +145,9 @@ SIN CONSERVANTES;GÜR SPORT;ayuda a energizar;e hidratar el cuerpo.;CONTIENE ELE
 UP;lima, limón & burbujas;;(****)_MG_144.jpg
 De;ANTES MENOS AZÚCAR SIN COLO;3;Té Helado;SUNTE;BIRINCON;ERARIO;"COMPARADO CON BOXEE;CONTENIDO VETOKONE;;(****)_MG_145.jpg
 33;;(****)_MG_146.jpg
-GO;GOURMET;familia;Gaur;balament;Omega;buena a;O BALANCE 360;BA;grasim;(omegn die;DE OMEGAS;0,4g de Omega 3, 3g de Omega 6, 4.5g de Omega 9 por porción.;Desde 
-las;asegurat;nutrientes;salute;ENRIQUECIDO CON;MICRONUTRIENTES;el organist;Cuida tu familia.;CRECOMENDADO;:;SOCIEDAD;PEDIATRIA;COLOMBIANA;DEI;Mezcla de Aceites Vegetales;(arterido Nero 500 cm3;;(****)_MG_147.jpg
+GO;GOURMET;familia;Gaur;balament;Omega;buena a;O BALANCE 360;BA;grasim;(omegn die;DE OMEGAS;0,4g de Omega 3, 3g de Omega 6, 4.5g de Omega 9 por porción.;Desde las;asegurat;nutrientes;salute;ENRIQUECIDO CON;MICRONUTRIENTES;el organist;Cuida tu familia.;CRECOMENDADO;:;SOCIEDAD;PEDIATRIA;COLOMBIANA;DEI;Mezcla de Aceites Vegetales;(arterido Nero 500 cm3;;(****)_MG_147.jpg
 22;35;LOTE AC 0901;FUTO 07 ABR 2017;TAMPICO;JOEN;AMINAC;CON;MINAA;Tehool;Moral;shoes;Post;Canlle;Aloerli;TABL0330m;Sale;;(****)_MG_148.jpg
-22;CRA BEBIDA DE AGUA CON ALOE VERA B;3;EMIUM;TATA TESIS;NATURAL;Original;"Role bien andes de obci;Consumnose prefa;- Manti;Vero;antes de;refrigerado después de abierto;pulpa;de;Contiene;Aloe;100%;Natural;Vera;mo;S;IN AZUCAR;IN PRESERVATIVOS;IN COLORANTES;Cont. Neto 500 ml;Consumase bien frío;VERA;BEBIDA DE AGUA CON 
-ALOE VERA B;;(****)_MG_149.jpg
+22;CRA BEBIDA DE AGUA CON ALOE VERA B;3;EMIUM;TATA TESIS;NATURAL;Original;"Role bien andes de obci;Consumnose prefa;- Manti;Vero;antes de;refrigerado después de abierto;pulpa;de;Contiene;Aloe;100%;Natural;Vera;mo;S;IN AZUCAR;IN PRESERVATIVOS;IN COLORANTES;Cont. Neto 500 ml;Consumase bien frío;VERA;BEBIDA DE AGUA CON ALOE VERA B;;(****)_MG_149.jpg
 22;23;23;2;30;30;33;13;ED;a botella;aporta;una;400 ml;Välle;8%*;FRESH;% basado en;2000 calorias;10;TO LOCO,;OIL;CONI;MINAS;B3;B6;"B12;501;QU;BEBIDA CON JUGO SABOR;LIMON;400 m;;(****)_MG_150.jpg
 3;OKE.;Aloe;N.;vera;TM;ALOE VERA DRINK;Sugarfree;GOLD;CARD;Monde Selection;Award;aste;AWARD;WORLD;SALES;me perior;Tward;Beverage;Innovation;SABORIZADO;NO.1 P IN A;NATURAL;Bebida de Aloe;BRAND;Awards;2012;FINALIST;Golden Eurog;Award;16.9 FL OZ (1.06 PT) 500ML;;(****)_MG_151.jpg
 23;De;33;VISA;MAN;30;BEBIDA DE MALTA;NUEVA/NEW;WITA;MALT;PLUS;ACAI · GUARANA - ALOE VERA;NON-ALONE;-EVERAGE;nicion date/Fecha de producción;bat el consumi preferiblemente antes de 115-Y;Net 330 mL (11.2 flot);;(****)_MG_152.jpg
@@ -177,8 +169,7 @@ Meie;3;13;Coca-Cola;a botella de;m/;lapor;una;600;31M;Juntos;hacemos,;magia;600 
 03;STIsru;ре;33;REFRESCO DE AGUA SABORIZADA;HOh!;CA;7;UP;LIMA & LIMÓN;CONTENIDO NETO:600;mil;CERO CALO;;(****)_MG_168.jpg
 15 ENE 13 06:53;13L01697424;IN;;(****)_MG_169.jpg
 Swa;Alpina;33;friz;33;O MANGO;& LULO;Minióból <*;Bebida con jugo de;TOMAS mango y lulo,;9;POROP LIGERAMENTE;GASIFICADA;Cont. Neto;350 mL;;(****)_MG_170.jpg
-Bebida Mista de Uva,;Maçã e Limão;Agite Antes de Beber;Bebida Mb;Diabetios com;água mineral;maça lime;benzoato de su;potássio Nu;santana (N-50;i), sequestra;(INS-385acali;aroma natura;S. (INS-123e;Não alcoolice;vide marcar;gara. Na;Produits;Alimentos;loci Fenster;Campos do;0002-22;Citrus;no SPATE;COM;en avomatizante 
-e sucos naturais Conteudo 250ml;7189616;;(****)_MG_171.jpg
+Bebida Mista de Uva,;Maçã e Limão;Agite Antes de Beber;Bebida Mb;Diabetios com;água mineral;maça lime;benzoato de su;potássio Nu;santana (N-50;i), sequestra;(INS-385acali;aroma natura;S. (INS-123e;Não alcoolice;vide marcar;gara. Na;Produits;Alimentos;loci Fenster;Campos do;0002-22;Citrus;no SPATE;COM;en avomatizante e sucos naturais Conteudo 250ml;7189616;;(****)_MG_171.jpg
 3;De;22;30;3;taeg;ctar tradicional;néctar;de guayaba;el sabor de la vida;LIGHT;90% MENOS CALORÍAS;80% MENOS AZÚCAR;Contenido Neto;Néctar de guayaba light en calorias;sin adición de azúcar;220ml;PAGADO;;(****)_MG_172.jpg
 24;0;10 Aqua Pura;Comfandi;Contenido Neto 600ml;Agua Potable Tratada;;(****)_MG_173.jpg
 20:33;TE ES OTR;OMI;Ingredientes: Agua potable tratada con gas la cantada;Producido y nasado por: RTO S.A.S.Diana 528 10-150;Bodega 102 Bello, Antioquia. Para:Kobe Colombia SS. Para;Industrialy Logística del Norte. Vereda Canavita. Locandal;Cundinamarca, Colombia PBX: +571 2561051. Les gratuita de;atención al Cliente 01 120281.;Registro sanitari INVIMARSAA17126813;30;DESCURA Y PUREZA;AGUA CON GAS;POTABLE TRATADA CON GAS;Cont. neto: 600ml;Consérvese en lugar fresco. Después de abierto consúmase en el;tiempo posible. Consumir preferiblemente antes de: Ver envase;ENVASE NO RETORNABLE;30;;(****)_MG_174.jpg
@@ -186,8 +177,7 @@ e sucos naturais Conteudo 250ml;7189616;;(****)_MG_171.jpg
 Exp.10 NOU 17;L 101115;CONTENIDO NETO 500 ml;Borbollón;AGUA POTABLE TRATADA;EXTRA-VIRGEN;kids;LLUVIA de AMOR;7 "707195"080055;;(****)_MG_176.jpg
 23;De;33;33;Puley;A0880;hatua;U;de;bito;de;18;Colanta;MARACUYA;Forti Contiene 12% de fruta;ene;MAS;Contencourt;Soom;REFRESCO DE MARACUYA;PASTEURIZADO, FORTIFICADO CON;WITAMINAST FIBRA PREBIOTICA, CON FRUTA;;(****)_MG_177.jpg
 2;FET;oskarston;We do Botelón SA.;Postobón S.A.;Medellin.;315100;inquietudes;con la linea de atención;00515959;a más cercana;un lugar fresco;berto consúmase;tempo posible.;tario No. RSAA 19101699.;imbia.;CRISTAL;el agua de vida;Contenido Net;ferentemente;Erase;420m/;Agua Potable Tratada;;(****)_MG_178.jpg
-para personal Sales El mite maximo;EN UN LUGAR;aceptable de consumo diario de;reproducto Solo Dodra mercado Pandido do Pocon Mayor de 10 anos;AR FRESCO Y SECO 
-CONSUMALOFRIO.;producto es de tres;BEBIDA ENERGIZANTE COMO MEDIAS;C;% i;ENERGÍA PARA TU DÍA A DÍA;;(****)_MG_179.jpg
+para personal Sales El mite maximo;EN UN LUGAR;aceptable de consumo diario de;reproducto Solo Dodra mercado Pandido do Pocon Mayor de 10 anos;AR FRESCO Y SECO CONSUMALOFRIO.;producto es de tres;BEBIDA ENERGIZANTE COMO MEDIAS;C;% i;ENERGÍA PARA TU DÍA A DÍA;;(****)_MG_179.jpg
 **;ACEITE VEGETAL;GRACETALES;CATE;BC;FR;el co;Eco, lejos de la la;conservese en unferible no freir a una temperatura;ayor de 180°C;7;AFORICE;Libre de;porción;711702179"005208;Fuente natural de Omega b y Omega 9 TRANS;Vitamina E libre de colesterol;Contenido Neto 500cm0;;(****)_MG_180.jpg
 >;REMIUM;SALSAS,;Seperti;--;BUCATTI;PannaRosa;480 g. Con Ingredientes Naturales;UTE;;(****)_MG_181.jpg
 33;1964 18:02 LOTE 2904 2013;va 3706/2014;Aceite comestible de Soya;Mallorca;500CC;Naturalmente;libre de colesterol;10;IMPORTADO POR:;CI ADM COLOMBIA LTDA. NIT 900.291.798-O REGISTRO INVIMA: RSIA 1813410;Cra. 9781A-26 Oficina 802 803 Tels: (571) 317 1404 317 1415-317 107-317148;www.adm.com Bogotá-Colombia;;(****)_MG_182.jpg
@@ -204,13 +194,10 @@ LAMEL;33;5800;una porción;CONSUMRE;ANTES E BEN;de ©2012 18 000;CADA VASO DE;an
 23;CRISTAL;Tomos;VITA;fur;nut;Colu;3;Vitalit;>.-+DE-Con;VITA;VITAMINA;B3;VITAMINA;B6;VITAMINA;B12;OB;CALCIO;El Cole;LIMÓN;Cero Calorías;Contenido Neto;500 ml;3;Consum;Refresco de agua enriquecida con vitaminas sabor a Umón.;NO RETORNABLE;;(****)_MG_193.jpg
 32;3;33;malla;i;Nutritiva y deliciosa;.;;(****)_MG_194.jpg
 23;30;33;ZUMO DE UVA;DULCE X 500 m;AL 35 0881055;3;2580;2580.00 x;08/11/2012;30;18;FABRO;di Caha,;to de Sodlo);of Cane;Soubinzoate);Conserves;destapado,;asmo posible;in a co;mal 100;Zuno de los;oretta;180112;2500713;vid;d@ Ana Isabella;7170727;Contenido Neto: 500 ml.;;(****)_MG_195.jpg
-ala;>;23;konkret ORIGINAL;TRISH CREAM;BAILEYS;ANG;Inder Cap;issing;THE ORIGINAL IRISH CREAM;sleurized;O PACKAGED;FED ON TOP;STAMPED;30;Coffee Creamer;SED TO;OPENED.;WONSUME;3;URD AND;NOS ARE;NATURAL & ARTIFICIAL FLAVORS;THE ORIGINAL IRISH CREAM;COU ARE;NON ALCOHOLIC;ELESTIONS;All the form of Baile without the alcohol;ZATED;BEBIDA CON CREMA DE LECHE PARA CAFE ULTRA;PASTEURIZADA BABOR A CREMA IRLANDESA;Contenido neto: 946 ml;Item 324319;Mantenga refrigerado;Agite bien antes 
-le usar una vez abierto consuma dentro de 14 dias;Ingredientes: agua, azúcar,;crema de leche", sabores naturales y;articlales, fosfato disódico (estabilizador), color artificial, polisorbato;80 carragenina, caseinato de sodio (emulsionantes) "No es una;fuente significativa de lactosa Contiene leche. No contiene alcohol;Información Nutricional: Tamaño de la porción 1 cda;(15ml). Porciones por envase aprox 63. Cantidad por porción:;Caloría 25 Calorías de grasa , orwa total 0.5g (1% VD). Grasa;saturada Og (0% VD), Grasa trans a Colesterol Omg (0% VD), Bodio;Somg (2 % VD), Carbohidratos totales 9 (2%VD), Fibra dietarla;og (0%;VD), Azúcares 59, Proteina og Vitamina A (0% VD), Vitamina C (0%;VD), Calcio (0% VD), Hierro (0% VD). Los porcentajes de valores;Diarios están basados en una dieta de 2000 calorias;Registro sanitario RSIA 9119012. Fabricado por HP Hood;Winchester, VA 2260'. Estados Unidos Importado por PriceSmart;Colombia S A.S., Ca e 94A 
-NO 11A - 53, Bogotá Lote ve cuello de;envase Fecha de vecimiento: 23 Mar 16;morto por JLMI ETALJDIC;32 FLOZ;(946 ml);00;;(****)_MG_196.jpg
+le usar una vez abierto consuma dentro de 14 dias;Ingredientes: agua, azúcar,;crema de leche", sabores naturales y;articlales, fosfato disódico (estabilizador), color artificial, polisorbato;80 carragenina, caseinato de sodio (emulsionantes) "No es una;fuente significativa de lactosa Contiene leche. No contiene alcohol;Información Nutricional: Tamaño de la porción 1 cda;(15ml). Porciones por envase aprox 63. Cantidad por porción:;Caloría 25 Calorías de grasa , orwa total 0.5g (1% VD). Grasa;saturada Og (0% VD), Grasa trans a Colesterol Omg (0% VD), Bodio;Somg (2 % VD), Carbohidratos totales 9 (2%VD), Fibra dietarla;og (0%;VD), Azúcares 59, Proteina og Vitamina A (0% VD), Vitamina C (0%;VD), Calcio (0% VD), Hierro (0% VD). Los porcentajes de valores;Diarios están basados en una dieta de 2000 calorias;Registro sanitario RSIA 9119012. Fabricado por HP Hood;Winchester, VA 2260'. Estados Unidos Importado por PriceSmart;Colombia S A.S., Ca e 94A NO 11A - 53, Bogotá Lote ve cuello de;envase Fecha de vecimiento: 23 Mar 16;morto por JLMI ETALJDIC;32 FLOZ;(946 ml);00;;(****)_MG_196.jpg
 02;Genesis;Télimen;[;Contiene;Cristales de;Aloe Vera;XIDA;Cont. Neto;250 ml;EISS;ADOS;;(****)_MG_197.jpg
 Da;2;23;20;30;cocina;MEXICANA;OAXXA;;(****)_MG_198.jpg
-2;V.;23;33;Apple Juice;FROM CONCENTRATE;WELL;ERITO;HE;Florida's;Natural;BRAND GROWERS'PRIDE;பார்ii ப்ரீய;100%;DAILY VALUE;VITAMINS;16 FL:OZ. (1PT) 473mL;;(****
-)_MG_199.jpg
+2;V.;23;33;Apple Juice;FROM CONCENTRATE;WELL;ERITO;HE;Florida's;Natural;BRAND GROWERS'PRIDE;பார்ii ப்ரீய;100%;DAILY VALUE;VITAMINS;16 FL:OZ. (1PT) 473mL;;(****)_MG_199.jpg
 FUZE;tea Herbal;Diquojo ypg.my;Manzana Limonaria;TÉ NEGRO;mm。;10K;un producto de la familia Coca Cola;o sabor manzana limonaria;400 m);;(****)_MG_200.jpg
 *;>;Ľu;Jugo de;Mattänya;100%;fruta;FRUTAS DEL CAUCA;sin azúcar.;Producto;de Cosecha;Cont. Neto 1.000 ml;;(****)_MG_201.jpg
 2;3;ADE;COOL;15;Bebida de té negro sabora limon;Contenido Neto:;500 m;1412;;(****)_MG_202.jpg
@@ -226,13 +213,12 @@ UN;SABOR LIGERO;Ceca-Cola;BEBIDA GASEOSA;CLM;Old;30;09;SIN CALORÍAS;300 ml;;(**
 00% SABOR NATURAL;Sprite;a botella de;una;laporta;400 m/s;400 ml;% en base a;BEBIDA GASEOSA 2000 calorias;0;;(****)_MG_212.jpg
 1:00;33;CONAL;LATION;TOYO;ng;na 10;Mr.;Ta;ica;ko;to;ad;Ligh;Limón;LA;BEBIDA DE TÉ CON SABOR ALMÓN/ LENOI AU;;(****)_MG_213.jpg
 03;((ՊԻ»)Wif(«ղը,;ATUR;I SERVA;MEDICTS;15642;LL A;32;P A N NA;30;OLTINOIVN WOy va van;VOIVOTONIO;NAO CONTEM GLUTEN;RESDUO DE EVAPO;ACQUA PANNA;N;AGUA MINERAL NATURAL;Himacion Murimenta/Nutricional. Composicion Media por porción de 240 ml; Contenido energético o 170 kali pertal;DE MINERALIZACION DEBIL / ÁGUA MINERAL NATURAL;o poder de los cuales Grasas Saturadas Og Hidratos de carbono Og de los cuales Azúcares 0 g Fibra dieten i Sodo;*O CONSEPRONEN UN LOCO FRESCO, ASCIUTTO, PULTO E SENZA ODORE AL RIPARO DALA LUCE SOLARE NON CONGELARE CONSERVE EN UN LIGA SEO;SEO VALIDO DE AROMAS QUE LO CONTAMINEN. PROTEGER DE LA LUZ SOLAR NO CONGELAR CONSERVAR EM LOCAL LIMPO ECO RET SIDER;LO WECO DALE SOUR NO CONGELAR, CONSERVE EL AMBIENTE DEPOSITE R. ENVASE VACO EN LA BASURA / EL CONTENEDOR RECIDO;00;LTE ne;The perfect match to SPELLEGRINO for the finest meals;;(****)_MG_214.jpg
-23;33;12;TENGO;V8;SEIFS;Splash;Fruit;Medley;80;A FLAVORED JUICE BEVERAGE WITH 5 JUICES;FROM CONCENTRATE;UNA BEBIDA SABORIZADA A BASE DE JUGOS;CONS JUGOS DE CONCENTRADO;CALORIES;PER 8 PL OZ.;Mezcla De Frutas;ANTONIDANT A&C;20 CALORÍAS;POR CADA 8 ONZAS;LIQUIDAS;VITAMINS;VITAMINAS AY C ANTIOXIDANTES;NETACONTENIDO LE;16 
-FL;. 01. (1P1) (0761;;(****)_MG_215.jpg
+23;33;12;TENGO;V8;SEIFS;Splash;Fruit;Medley;80;A FLAVORED JUICE BEVERAGE WITH 5 JUICES;FROM CONCENTRATE;UNA BEBIDA SABORIZADA A BASE DE JUGOS;CONS JUGOS DE CONCENTRADO;CALORIES;PER 8 PL OZ.;Mezcla De Frutas;ANTONIDANT A&C;20 CALORÍAS;POR CADA 8 ONZAS;LIQUIDAS;VITAMINS;VITAMINAS AY C ANTIOXIDANTES;NETACONTENIDO LE;16 FL;. 01. (1P1) (0761;;(****)_MG_215.jpg
 *;03;2;3;30;COMPLETO Y BALANCEADO;sure;ADVANCE;Con HMB, Proteinar War;VAINILLA;Sabor Natural y Artificial;3;116 lalim;Abbat;eNeto 237 ml (807);Alimento liquido;;(****)_MG_216.jpg
 23;3;33;33;30;Aceite;Vegetal de;SOYA;CERECOI;09;18;100% Soya;3;samt de 25 Ingredientes: 100% Aceite puro de Soya.;Comercializado por CERECOL S.A.;Av. de las Américas Mercasa Galpón 3 Bodega 1 Pereira Rda.;Tels. (6) 320 4427 - 320 4419;Envasado por COMERCIALIZADORA PIEDRAHITA S.A.S;Registro Sanitario INVIMA RSAR 181205;Cra. 1 No. 11 - 02 Esquina Tel. (2) 214 3838 Cartago Valle - Colombia;34;;(****)_MG_217.jpg
 2;4;23;30;30;LE;Carulla;Refresco;Limonada;CONTENIDO NETO;350 ml;;(****)_MG_218.jpg
-KEPUTADA;CONTENIDO NEWS;.;Dancali;Desde 1958;date gusto sie;4:01 Pbx: 486 00 86 - 446 65 53 Cali - Valle www.dancali.com;30;(;LVEN LU Jum 15;;(****)_MG_219.jpg23;33;3;NE\24220253;BEST BY NUS;30;AUTES ASSIST;AL 36 20680;SS 2000;18;19/01/2013;Welch's;SINCE 1869;Strawberry;Kiwi;10 FL. OZ.;(296ml);FLAVORED 3 JUICE DRINK 
-FROM CONCENTRATE;NATURAL & ARTIFICIAL FLAVOR;;(****)_MG_220.jpg
+KEPUTADA;CONTENIDO NEWS;.;Dancali;Desde 1958;date gusto sie;4:01 Pbx: 486 00 86 - 446 65 53 Cali - Valle www.dancali.com;30;(;LVEN LU Jum 15;;(****)_MG_219.jpg
+23;33;3;NE\24220253;BEST BY NUS;30;AUTES ASSIST;AL 36 20680;SS 2000;18;19/01/2013;Welch's;SINCE 1869;Strawberry;Kiwi;10 FL. OZ.;(296ml);FLAVORED 3 JUICE DRINK FROM CONCENTRATE;NATURAL & ARTIFICIAL FLAVOR;;(****)_MG_220.jpg
 23;LOTE 13148 08:14;1 VEN.25 OCT 13;33;Colcate;11233;32;33;REPU;30;Café Helado;Bebida de café;sabor frutal a durazno;Disfrútalo (QAntioxidante;bien frio;Naturales;Cada porción de 300ml contie;Grasas;Calorias;Azucare;Grasa;saradas;Sodio;Og Og 20mg;0% 0% 1%;Del porcentaje del valor diario recomendado para adultos;9lkcal 21g;5% 23%;Contenido Neto;SV;712;300ml;nutresa;;(****)_MG_221.jpg
 alala;10:30);3030;DENETO;135;CABIFY;TU SOLUCIÓN DE MOVILIDAD;Cabifyco Cabify-Colombia Cabik,;;(****)_MG_222.jpg
 >;De;33;30;San;Jorge;Nectar;de Durazne;Contenido Neto:;200 ml;215 frota en nectar;;(****)_MG_223.jpg
@@ -279,8 +265,7 @@ Agua;Natural;Agua potable tratada;(o;Carrefour;Agua;potable;13;Contenido neto;60
 Importado por;LAURUS LTDA.;Reg. Sanitario;No. RSIA1911501;Tel: (1) 5102284;laurusltda@gmail.com;30;;(****)_MG_264.jpg
 *;-;04121LAL;Sin azúcar;agregada;Hand-Picked Goodness;MOTTS;VITIONS.com.rara correr aos y sugerencRS,;o envianos;comunicate al 1-800-426-4891 o envíanos un mail a consumercare@motts.com.;On us an COTISUT;Excelente Fuente de;Vitamina C;104. 07 100% Jugo de Manzana;(236 ml) Preparado de concentrado con ingredientes aficionalis;;(****)_MG_265.jpg
 More;";TRIP;;(****)_MG_266.jpg
-*;IS ETE 13;L3CA08:40;GENE1;3CA084;13;32;33;LE;CAMILA;"012055;EURO;CATE;BY;LATES;Coca colombi;Hormación Nutricional;ndo per Portion 1 vaso (400ml);ieras por envase 1;wador Porción;la 110;Yalor Diario;0%;2%;Studierto Total 28 99%;Premia;289;Rojo;0%;konspira de Grasa Saturada,;tunay Gras Trans, Colesterol, Pora;Vienna 
-Caldo Hierro.;Urata de Valores Varios están;adeta de 2000 calories. Sus;is die preden ser mayores o menores;desstecesidades cabricas;400 ml;;(****)_MG_267.jpg 
+*;IS ETE 13;L3CA08:40;GENE1;3CA084;13;32;33;LE;CAMILA;"012055;EURO;CATE;BY;LATES;Coca colombi;Hormación Nutricional;ndo per Portion 1 vaso (400ml);ieras por envase 1;wador Porción;la 110;Yalor Diario;0%;2%;Studierto Total 28 99%;Premia;289;Rojo;0%;konspira de Grasa Saturada,;tunay Gras Trans, Colesterol, Pora;Vienna Caldo Hierro.;Urata de Valores Varios están;adeta de 2000 calories. Sus;is die preden ser mayores o menores;desstecesidades cabricas;400 ml;;(****)_MG_267.jpg 
 AGUA SABOR LINGERIE;AL 35;2402050;4200;fo...;8.88;1102/2012;xml;33;03;30;Ayala's;erbal;Give;Gire;200;| flora;Lemo;The;| layer;WA NE E R;R.;300;| Inge;OTO;ginger;peda;Mate;lemon peel;zero is good;USDA;ORGANIC;zero calories zero artificial zero preservatives;Beste;16 FL OZ 473 mL);;(****)_MG_268.jpg
 33;33;100%;Country Hill;JUGO DE MANZANA;Contenido Neto:;nutreso;300 ml;;(****)_MG_269.jpg
 23;MODULA))..;THE DOOR 2017;33;ca-Cola;250 ml;LNETO;VIA GASEOSA;%o basado en;2000 calorias;;(****)_MG_270.jpg
@@ -288,6 +273,3 @@ RECICLE;7 '702535"004470;zero;Sprite;SOOM;";ייייייייייויין;;(****)
 & DIC 15 19:49;I!;33;600;32;ULLITROS;de: Ver envase.;IM;NO;32;A;CANCELADO;14;Consumir prefere;DRY;Ginger Ale;Selo de;on Sea Schor a Ginger Ale;dute lo leto. 600 ml;LETORASILE;Calidad;icontec;NTCD;RENDUS;GASEOSAS;;(****)_MG_272.jpg
 03;33;ANADR;MR;32;DRY;Ginger Ale;30;Bebida;Gaseosa;Sabor a;GINGER ALE;CALORÍAS;90 kcal;Contenido;Neto:;300ml;No Retornable;4,5%*;;(****)_MG_273.jpg
 *;2;LA MED;11;H;Välle;55 basador;2000 calorias;FRESH;STAMINE;B3;B6;B12;„;Now;GRESO;BEBIDA CON JUCO SABOR;MANDARINA;500 m;;(****)_MG_274.jpg
-
-
-
