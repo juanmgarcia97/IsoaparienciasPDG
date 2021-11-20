@@ -1,5 +1,6 @@
 import io
 import os
+from tkinter.constants import TRUE
 from google.cloud import vision
 
 SPLITTER = "(****)"
@@ -7,7 +8,7 @@ SPLITTER = "(****)"
 os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = r'ServiceToken.json'
 client = vision.ImageAnnotatorClient()
 
-truth_text = open('test.txt', "a")
+truth_text = open('test1.txt', "a")
 
 
 list_files = os.listdir(r'Images')
@@ -36,5 +37,16 @@ images_results = []
 #     images_results.append(finalText + SPLITTER + aux_name + '\n')
 #     count += 1
 
-truth_text.writelines("了無")
-truth_text.close()
+# truth_text.writelines("了無")
+# truth_text.close()
+
+def existsInTruthText(image_result):
+    with open('test1.txt', encoding='utf-8', errors='ignore') as f:
+        lines = f.readlines()
+    hex_result = image_result.split('(****)')[0]
+    for i in lines:
+        hex_new_image = i.split('(****)')[0]
+        print(hex_new_image)
+        if(hex_new_image == hex_result):
+            return True
+    return False

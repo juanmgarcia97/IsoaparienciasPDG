@@ -5,6 +5,7 @@ import os
 import cv2 #py -m  pip install opencv-python
 import VisionAPIDemo as apiText
 import VisionAPIForms as apiImg
+import TruthTextUpdater as verifier
 
 # Creación de la pantalla principal de la aplicación.
 root = Tk()
@@ -149,10 +150,20 @@ def openWindow():
     # comboType.pack()
     # print(list)
     new_image = filedialog.askopenfilename(title="Seleccionar nueva imagen")
-    result_vision = apiText.processImage(new_image)[0] + "(****)" + new_image.split('/')[-1]
-    print(result_vision)
-    file =open("test1.txt", encoding="utf-8", errors="ignore")
-    lines = file.write(result_vision)
+    new_image_name = new_image.split('/')[-1]
+    result_vision = apiText.processImage(new_image)[0] + "(****)" + new_image_name
+    # print(result_vision)
+    # print(verifier.existsInTruthText(result_vision))
+    if(not verifier.existsInTruthText(result_vision)):
+        try:
+            with open("test1.txt", "a") as file:
+                file.write(result_vision + "\n")
+            messagebox.showinfo("Exito","La imagen: " + new_image_name + " se ha agregado correcctamente a la tabla de verdad en la ultima posicion!")
+        except:
+            messagebox.showerror("Error","No se ha podido guarda la imagen")
+    else:
+        messagebox.showerror("Error", "La imagen ya se encuentra en la tabla de verdad")
+
 
 
 # Método para asignar las imágenes disponibles según el tipo de botella.
