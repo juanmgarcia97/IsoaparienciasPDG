@@ -3,6 +3,7 @@ import cv2
 
 
 def findIsoappearances(filename1, filename2):
+    print(filename1, filename2)
     query_img = cv2.imread(filename1)
     train_img = cv2.imread(filename2)
 

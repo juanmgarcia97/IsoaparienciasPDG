@@ -9,7 +9,7 @@ import VisionAPIForms as apiImg
 # Creación de la pantalla principal de la aplicación.
 root = Tk()
 root.title('Isoapariencias de medicamentos inyectables')
-root.iconbitmap(r'Images/icons8-capsule-64.ico')
+root.iconbitmap(r'Icons/icons8-capsule-64.ico')
 root.geometry("500x600")
 
 # Aquí estoy intentando que la aplicación se abra en la mitad de la pantalla
@@ -57,39 +57,39 @@ def findIsoText():
     resultIso = LabelFrame(root, padx=2, pady=2)
     resultIso.pack()
     labelData = Label(resultIso)
-    try:
-        data = apiText.processImage(filename)[0]
-        hm = HashMap()
-        values = []
+    # try:
+    data = apiText.processImage(filename)[0]
+    hm = HashMap()
+    values = []
 
-        with open('truthText.txt') as f:
-            lines = f.readlines()
+    with open('truthText.txt') as f:
+        lines = f.readlines()
 
-            # array = lines.split('\n')
-            for i in lines:
-                arr = i.split('(****)')
-                img_name = arr[1].rstrip()
-                hm.put(apiText.comparisonStrings(data, arr[0]), img_name)
-                values.append(apiText.comparisonStrings(data, arr[0]))
-            
-            # values = cv2.sort(values)
-            values.sort(reverse=True)
+        # array = lines.split('\n')
+        for i in lines:
+            arr = i.split('(****)')
+            img_name = arr[1].rstrip()
+            hm.put(apiText.comparisonStrings(data, arr[0]), img_name)
+            values.append(apiText.comparisonStrings(data, arr[0]))
+        
+        # values = cv2.sort(values)
+        values.sort(reverse=True)
 
-        result_values, image_names = apiText.findGreaterValues(values, hm)
-        better_image = os.path.join(os.path.dirname(__file__) + '\Images' , image_names[0])
-        for image in image_names:
-            general_path = os.path.dirname(__file__) + '\Images' 
-            image_path = os.path.join(general_path, image.split(':')[0])
-            # print(image.split(' ')[0])
-            # img = ImageTk.PhotoImage(Image.open(image_path).resize([200, 300]))
-            # img_label = Label(resultIso, image=img)
-            # img_label.image = img
-            # img_label.pack()
-        labelData = Label(resultIso)
-        labelData.config(text=result_values)
-        labelData.pack()
-    except:
-        messagebox.showerror("Sin imagen", "¡Debes cargar una imagen primero!")
+    result_values, image_names = apiText.findGreaterValues(values, hm)
+    better_image = os.path.join(os.path.dirname(__file__) + '\Images' , image_names[0])
+    for image in image_names:
+        general_path = os.path.dirname(__file__) + '\Images' 
+        image_path = os.path.join(general_path, image.split(':')[0])
+        # print(image.split(' ')[0])
+        # img = ImageTk.PhotoImage(Image.open(image_path).resize([200, 300]))
+        # img_label = Label(resultIso, image=img)
+        # img_label.image = img
+        # img_label.pack()
+    labelData = Label(resultIso)
+    labelData.config(text=result_values)
+    labelData.pack()
+    # except:
+    #     messagebox.showerror("Sin imagen", "¡Debes cargar una imagen primero!")
 
 def deleteResultIsoFrame():
     try:
@@ -99,16 +99,17 @@ def deleteResultIsoFrame():
 
 # Método para buscar las similitudes en las imágenes usando dos imágenes cargadas.
 def findIsoImg():
-    try:
+    # try:
         
         data = apiImg.findIsoappearances(
             filename1=filename, filename2=better_image)
+        print(filename, better_image)
         image = cv2.imshow("", data)
         labelData = Label(resultIso, image=image)
         labelData.pack()
-    except:
-        messagebox.showerror(
-            "Sin imágenes", "¡Debes cargar dos imágenes para seguir!")
+    # except:
+    #     messagebox.showerror(
+    #         "Sin imágenes", "¡Debes cargar dos imágenes para seguir!")
 
 
 # Método para eliminar la(s) imagen(es) cargada(s).
