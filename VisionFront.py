@@ -60,11 +60,12 @@ def findIsoText():
     data = apiText.processImage(filename)[0]
     hm = HashMap()
     values = []
+    image_selected = filename.split('/')[-1]
 
-    with open('test.txt', encoding='utf-8', errors='ignore') as f:
+    with open('truthText.txt', encoding='utf-8', errors='ignore') as f:
         
         lines = f.readlines()
-        print(lines)
+        # print(lines)
         
             
     # try:
@@ -72,9 +73,10 @@ def findIsoText():
     for i in lines:
         arr = i.split('(****)')
         img_name = arr[1].rstrip()
-        print(arr[1])
-        hm.put(apiText.comparisonStrings(data, arr[0]), img_name)
-        values.append(apiText.comparisonStrings(data, arr[0]))
+        if img_name != image_selected:
+            # print(arr[1])
+            hm.put(apiText.comparisonStrings(data, arr[0]), img_name)
+            values.append(apiText.comparisonStrings(data, arr[0]))
         
         # values = cv2.sort(values)
     values.sort(reverse=True)
@@ -129,45 +131,50 @@ def deleteImage():
 
 
 def openWindow():
-    global comboType, combo, newWindow
-    newWindow = Toplevel(root)
-    newWindow.title("Escoger medicamento")
-    newWindow.geometry("200x200")
-    combo = ttk.Combobox(newWindow, values=bottle_types)
-    combo['state'] = "readonly"
-    combo.bind("<<ComboboxSelected>>", pickBottle)
-    combo.pack()
-    comboType = ttk.Combobox(newWindow)
-    comboType['state'] = "readonly"
-    try:
-        comboType.bind("<<ComboboxSelected>>", selectImage)
-    except:
-        messagebox.showinfo(
-            "Sin imágenes", "No hay imágenes disponibles en el momento.")
-    comboType.pack()
-    print(list)
+    # global comboType, combo, newWindow
+    # newWindow = Toplevel(root)
+    # newWindow.title("Escoger medicamento")
+    # newWindow.geometry("200x200")
+    # combo = ttk.Combobox(newWindow, values=bottle_types)
+    # combo['state'] = "readonly"
+    # combo.bind("<<ComboboxSelected>>", pickBottle)
+    # combo.pack()
+    # comboType = ttk.Combobox(newWindow)
+    # comboType['state'] = "readonly"
+    # try:
+    #     comboType.bind("<<ComboboxSelected>>", selectImage)
+    # except:
+    #     messagebox.showinfo(
+    #         "Sin imágenes", "No hay imágenes disponibles en el momento.")
+    # comboType.pack()
+    # print(list)
+    new_image = filedialog.askopenfilename(title="Seleccionar nueva imagen")
+    result_vision = apiText.processImage(new_image)[0] + "(****)" + new_image.split('/')[-1]
+    print(result_vision)
+    file =open("test1.txt", encoding="utf-8", errors="ignore")
+    lines = file.write(result_vision)
 
 
 # Método para asignar las imágenes disponibles según el tipo de botella.
-def pickBottle(event):
-    global path
-    path = r'Images'
-    list = os.listdir(path)
-    comboType.config(values=list)
+# def pickBottle(event):
+#     global path
+#     path = r'Images'
+#     list = os.listdir(path)
+#     comboType.config(values=list)
 
 
-def selectImage(event):
-    newWindow.destroy()
-    image_name = comboType.get()
-    data = apiText.processImage(path + image_name)[0]
-    labelData = Label(resultIso, text=data)
-    labelData.pack()
+# def selectImage(event):
+#     newWindow.destroy()
+#     image_name = comboType.get()
+#     data = apiText.processImage(path + image_name)[0]
+#     labelData = Label(resultIso, text=data)
+#     labelData.pack()
 
 
 # Creación de los botones con las funciones principales de la aplicación.
 upload_image = Button(frame, text="Cargar Imagen",
                       command=openFile).grid(row=0, column=0)
-chose_med = Button(frame, text="Elegir botella",
+chose_med = Button(frame, text="+ Imagen DB",
                    command=openWindow).grid(row=2, column=0)
 delete_image = Button(frame, text="Eliminar imagen",
                       command=deleteImage).grid(row=1, column=1)
