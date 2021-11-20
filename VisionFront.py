@@ -2,7 +2,7 @@ from tkinter import *
 from tkinter import filedialog, ttk, messagebox
 from PIL import ImageTk, Image
 import os
-import cv2
+import cv2 #py -m  pip install opencv-python
 import VisionAPIDemo as apiText
 import VisionAPIForms as apiImg
 
@@ -57,23 +57,27 @@ def findIsoText():
     resultIso = LabelFrame(root, padx=2, pady=2)
     resultIso.pack()
     labelData = Label(resultIso)
-    # try:
     data = apiText.processImage(filename)[0]
     hm = HashMap()
     values = []
 
-    with open('truthText.txt') as f:
+    with open('test.txt', encoding='utf-8', errors='ignore') as f:
+        
         lines = f.readlines()
-
-        # array = lines.split('\n')
-        for i in lines:
-            arr = i.split('(****)')
-            img_name = arr[1].rstrip()
-            hm.put(apiText.comparisonStrings(data, arr[0]), img_name)
-            values.append(apiText.comparisonStrings(data, arr[0]))
+        print(lines)
+        
+            
+    # try:
+            # array = lines.split('\n')
+    for i in lines:
+        arr = i.split('(****)')
+        img_name = arr[1].rstrip()
+        print(arr[1])
+        hm.put(apiText.comparisonStrings(data, arr[0]), img_name)
+        values.append(apiText.comparisonStrings(data, arr[0]))
         
         # values = cv2.sort(values)
-        values.sort(reverse=True)
+    values.sort(reverse=True)
 
     result_values, image_names = apiText.findGreaterValues(values, hm)
     better_image = os.path.join(os.path.dirname(__file__) + '\Images' , image_names[0])
