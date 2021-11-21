@@ -46,7 +46,6 @@ def existsInTruthText(image_result):
     hex_result = image_result.split('(****)')[0]
     for i in lines:
         hex_new_image = i.split('(****)')[0]
-        print(hex_new_image)
         if(hex_new_image == hex_result):
             return True
     return False

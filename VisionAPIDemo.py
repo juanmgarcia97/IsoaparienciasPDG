@@ -17,6 +17,12 @@ client = vision.ImageAnnotatorClient()
 # FILE_PATH = os.path.join(FOLDER_PATH, IMAGE_FILE)
 
 def processImage(file_path):
+    """Este método procesa una imagen con la
+    API de Google Vision y devuelve los textos encontrados
+    en ella.
+    
+    @param file_path: la ruta de la imagen a procesar
+    @author Joan David Colina y Juan Martín García"""
     with io.open(file_path, 'rb') as image_file:
         content = image_file.read()
 
@@ -28,6 +34,12 @@ def processImage(file_path):
     return finalText, response
 
 def processImageAllData(file_path):
+    """Este método procesa una imagen con la 
+    API de Google Vision y devuelve el nivel de
+    confianza por cada uno de los caracteres
+    
+    @param file_path: la ruta de la imagen a procesar
+    @author Joan David Colina y Juan Martín García"""
     pages = processImage(file_path)[1].pages
     for page in pages:
         for block in page.blocks:
@@ -55,16 +67,17 @@ def refactorText(data):
     return finalText
 
 def comparisonStrings(stringA, stringB):
-    # resultA = stringA.split('(****)')[0].split(';')
-    # resultB = stringB.split('(****)')[0].split(';')
-    # finalResult = 0
-    # for charA in resultA:
-    #     for charB in resultB:
-    #         finalResult += SequenceMatcher(None, charA, charB).real_quick_ratio()
-    # print(finalResult)
-    # return finalResult
-    # print(SequenceMatcher(None, stringA, stringB).ratio())
-    return SequenceMatcher(None, stringA, stringB).ratio()
+    resultA = stringA.split('(****)')[0].split(';')
+    resultB = stringB.split('(****)')[0].split(';')
+    finalResult = 0
+    for charA in resultA:
+        for charB in resultB:
+            finalResult += SequenceMatcher(None, charA, charB).ratio()
+            # print(charA, charB)
+    # print("Prueba:::", stringA, stringB)
+    return finalResult
+    # print("Prueba:::", stringA, stringB)
+    # return SequenceMatcher(None, stringA, stringB).ratio()
 
 def findGreaterValues(values, hashMap):
     response = hashMap.get(values[0]) + ": " + str(values[0]) + "\n" + hashMap.get(values[1])+": "+ str(values[1]) + "\n"+ hashMap.get(values[2])+": "+ str(values[2])

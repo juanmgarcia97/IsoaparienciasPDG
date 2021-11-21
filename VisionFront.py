@@ -3,6 +3,8 @@ from tkinter import filedialog, ttk, messagebox
 from PIL import ImageTk, Image
 import os
 import cv2 #py -m  pip install opencv-python
+import time
+import threading
 import VisionAPIDemo as apiText
 import VisionAPIForms as apiImg
 import TruthTextUpdater as verifier
@@ -12,6 +14,9 @@ root = Tk()
 root.title('Isoapariencias de medicamentos inyectables')
 root.iconbitmap(r'Icons/icons8-capsule-64.ico')
 root.geometry("500x600")
+app_style = ttk.Style()
+app_style.theme_use('clam')
+app_style.configure('TLabelFrame')
 
 # Aquí estoy intentando que la aplicación se abra en la mitad de la pantalla
 # app_width = 500
@@ -29,7 +34,7 @@ root.geometry("500x600")
 
 # Creación de marco para encerrar los botones principales.
 frame = LabelFrame(root, padx=2, pady=2)
-frame.pack(padx=2, pady=2)
+frame.pack(side=TOP, fill=Y)
 
 # Método para cargar una imagen y mostrarla en debajo del marco principal.
 
@@ -38,25 +43,56 @@ def openFile():
     global filename, imageIso
     filename = filedialog.askopenfilename(title="Seleccionar imagen")
     imageIso = LabelFrame(root, padx=2, pady=2)
-    imageIso.pack(padx=2, pady=2)
+    imageIso.pack(side=TOP)
     label = Label(imageIso, text=filename.rsplit("/")[-1])
-    label.pack()
+    label.pack(side=TOP)
     uploaded_image = ImageTk.PhotoImage(
-        Image.open(filename).resize([200, 300]))
+        Image.open(filename, mode='r').resize([200, 300]))
     # images_list.append(uploaded_image)
     image_label = Label(imageIso, image=uploaded_image)
     image_label.pack()
     image_label.image = uploaded_image
 
-# Método para buscar las similitudes en los textos usando la imagen cargada.
+# def showProgress():
+#     global progressFrame, pb
+#     progressFrame = Frame(root, pady=100)
+#     pb = ttk.Progressbar(progressFrame, orient='horizontal', mode='indeterminate')
 
+# def call():
+#     time.sleep(2)
 
 def findIsoText():
-    global better_image, resultIso
+    """Método para buscar las similitudes en los textos usando la imagen cargada."""
+    global better_image, resultIso, general_data_frame
     deleteResultIsoFrame()
+    # showProgress()
+    # pb.pack()
+    # pb.start(1)
+    # t = threading.Thread(target=call)
+    # t.start()
     # Creación de marco para mostrar el resultado de Google Vision.
-    resultIso = LabelFrame(root, padx=2, pady=2)
-    resultIso.pack()
+    general_data_frame = Frame(root, padx=2, pady=2)
+    general_data_frame.pack( expand=1)
+
+    canvas = Canvas(general_data_frame)
+    canvas.pack(side=LEFT,  expand=1)
+
+    scrolly = ttk.Scrollbar(general_data_frame, orient=VERTICAL, command=canvas.yview)
+    scrolly.pack(side=RIGHT, fill=Y)
+
+    scrollx = ttk.Scrollbar(general_data_frame, orient=HORIZONTAL, command=canvas.xview)
+    scrollx.pack(side=BOTTOM, fill=X)
+
+    canvas.configure(yscrollcommand=scrolly.set, xscrollcommand=scrollx.set)
+    # canvas.bind('<Configure>', lambda e: canvas.configure(scrollyregion=canvas.bbox("all")))
+    # canvas.bind('<Configure>', lambda e: canvas.configure(scrollxregion=canvas.bbox("all")))
+
+    aux_frame = Frame(canvas)
+
+    canvas.create_window((0,0), window=aux_frame, anchor="nw")
+
+    resultIso = LabelFrame(aux_frame, padx=2, pady=2)
+    resultIso.pack(side="top", fill="y")
     labelData = Label(resultIso)
     data = apiText.processImage(filename)[0]
     hm = HashMap()
@@ -64,7 +100,6 @@ def findIsoText():
     image_selected = filename.split('/')[-1]
 
     with open('truthText.txt', encoding='utf-8', errors='ignore') as f:
-        
         lines = f.readlines()
         # print(lines)
         
@@ -76,25 +111,33 @@ def findIsoText():
         img_name = arr[1].rstrip()
         if img_name != image_selected:
             # print(arr[1])
-            hm.put(apiText.comparisonStrings(data, arr[0]), img_name)
-            values.append(apiText.comparisonStrings(data, arr[0]))
+            comparison = apiText.comparisonStrings(data, arr[0])
+            hm.put(comparison, img_name)
+            values.append(comparison)
         
         # values = cv2.sort(values)
     values.sort(reverse=True)
 
     result_values, image_names = apiText.findGreaterValues(values, hm)
+    textIsoFrame = LabelFrame(aux_frame, padx=2, pady=2)
+    textIsoFrame.pack(side=TOP, fill="y")
+    for text in result_values.split('\n'):
+        labelData = Label(textIsoFrame)
+        labelData.config(text=text)
+        labelData.pack(side=LEFT, fill="x", padx=10, pady=10)
+
+    
     better_image = os.path.join(os.path.dirname(__file__) + '\Images' , image_names[0])
     for image in image_names:
         general_path = os.path.dirname(__file__) + '\Images' 
         image_path = os.path.join(general_path, image.split(':')[0])
         # print(image.split(' ')[0])
-        # img = ImageTk.PhotoImage(Image.open(image_path).resize([200, 300]))
-        # img_label = Label(resultIso, image=img)
-        # img_label.image = img
-        # img_label.pack()
-    labelData = Label(resultIso)
-    labelData.config(text=result_values)
-    labelData.pack()
+        img = ImageTk.PhotoImage(Image.open(image_path).resize([200, 300]))
+        img_label = Label(resultIso, image=img)
+        img_label.image = img
+        img_label.pack(side=LEFT, fill="x")
+    
+    
     # except:
     #     messagebox.showerror("Sin imagen", "¡Debes cargar una imagen primero!")
 
@@ -110,7 +153,7 @@ def findIsoImg():
         
         data = apiImg.findIsoappearances(
             filename1=filename, filename2=better_image)
-        print(filename, better_image)
+        # print(filename, better_image)
         image = cv2.imshow("", data)
         labelData = Label(resultIso, image=image)
         labelData.pack()
@@ -120,17 +163,17 @@ def findIsoImg():
 
 
 # Método para eliminar la(s) imagen(es) cargada(s).
-
-
 def deleteImage():
     try:
         imageIso.destroy()
         resultIso.destroy()
+        filename = None
+        general_data_frame.destroy()
     except:
         messagebox.showinfo("Error al eliminar", "¡No hay nada para eliminar!")
+
+
 # Método para abrir nueva ventana para elegir botella.
-
-
 def openWindow():
     # global comboType, combo, newWindow
     # newWindow = Toplevel(root)
@@ -183,17 +226,29 @@ def openWindow():
 
 
 # Creación de los botones con las funciones principales de la aplicación.
-upload_image = Button(frame, text="Cargar Imagen",
-                      command=openFile).grid(row=0, column=0)
-chose_med = Button(frame, text="+ Imagen DB",
-                   command=openWindow).grid(row=2, column=0)
-delete_image = Button(frame, text="Eliminar imagen",
-                      command=deleteImage).grid(row=1, column=1)
-find_iso_text = Button(frame, text="Encontrar similitudes (texto)",
-                       command=findIsoText).grid(row=0, column=2)
-find_is_img = Button(frame, text="Encontrar similitudes (img)",
-                     command=findIsoImg).grid(row=2, column=2)
-gen_report = Button(frame, text="Generar reporte").grid(row=1, column=3)
+frame_image = Frame(frame)
+frame_image.pack(side=LEFT)
+upload_image = ttk.Button(frame_image, text="Cargar Imagen", command=openFile)
+upload_image.pack(fill="both", padx=4, pady=4)
+
+add_image = ttk.Button(frame_image, text="+ Imagen DB", command=openWindow)
+add_image.pack(side=LEFT, fill="both", padx=4, pady=4)
+
+frame_iso = Frame(frame)
+frame_iso.pack(side=LEFT)
+find_iso_text = ttk.Button(frame_iso, text="Encontrar similitudes (texto)", command=findIsoText)
+find_iso_text.pack(fill="both", padx=4, pady=4)
+
+find_iso_img = ttk.Button(frame_iso, text="Encontrar similitudes (img)", command=findIsoImg)
+find_iso_img.pack(side=LEFT, fill="both", padx=4, pady=4)
+
+frame_options = Frame(frame)
+frame_options.pack(side=LEFT)
+delete_image = ttk.Button(frame_options, text="Eliminar imagen", command=deleteImage)
+delete_image.pack(fill="both", padx=4, pady=4)
+
+gen_report = ttk.Button(frame_options, text="Generar reporte")
+gen_report.pack(side=LEFT, fill="both", padx=4, pady=4)
 
 # https://stackoverflow.com/questions/8703496/hash-map-in-python
 
