@@ -42,16 +42,17 @@ frame.pack(side=TOP, fill=Y)
 def openFile():
     global filename, imageIso
     filename = filedialog.askopenfilename(title="Seleccionar imagen")
-    imageIso = LabelFrame(root, padx=2, pady=2)
-    imageIso.pack(side=TOP)
-    label = Label(imageIso, text=filename.rsplit("/")[-1])
-    label.pack(side=TOP)
-    uploaded_image = ImageTk.PhotoImage(
-        Image.open(filename, mode='r').resize([200, 300]))
-    # images_list.append(uploaded_image)
-    image_label = Label(imageIso, image=uploaded_image)
-    image_label.pack()
-    image_label.image = uploaded_image
+    if filename != " ":
+        imageIso = LabelFrame(root, padx=2, pady=2)
+        imageIso.pack(side=TOP)
+        label = Label(imageIso, text=filename.rsplit("/")[-1])
+        label.pack(side=TOP)
+        uploaded_image = ImageTk.PhotoImage(
+            Image.open(filename, mode='r').resize([200, 300]))
+        # images_list.append(uploaded_image)
+        image_label = Label(imageIso, image=uploaded_image)
+        image_label.pack()
+        image_label.image = uploaded_image
 
 # def showProgress():
 #     global progressFrame, pb
