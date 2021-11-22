@@ -71,8 +71,11 @@ def comparisonStrings(stringA, stringB):
     resultB = stringB.split('(****)')[0].split(';')
     finalResult = 0
     for charA in resultA:
+        initial_value = 0
         for charB in resultB:
-            finalResult += SequenceMatcher(None, charA, charB).ratio()
+            match_value = SequenceMatcher(None, charA, charB).ratio()
+            if match_value > initial_value:
+                finalResult = match_value
             # print(charA, charB)
     # print("Prueba:::", stringA, stringB)
     return finalResult
