@@ -2,6 +2,7 @@ from tkinter import *
 from tkinter import filedialog, ttk, messagebox
 from PIL import ImageTk, Image
 import os
+import PIL
 import cv2 #py -m  pip install opencv-python
 import time
 import threading
@@ -42,13 +43,14 @@ frame.pack(side=TOP, fill=Y)
 def openFile():
     global filename, imageIso
     filename = filedialog.askopenfilename(title="Seleccionar imagen")
+    size = (200, 300)
     if filename != " ":
         imageIso = LabelFrame(root, padx=2, pady=2)
         imageIso.pack(side=TOP)
         label = Label(imageIso, text=filename.rsplit("/")[-1])
         label.pack(side=TOP)
         uploaded_image = ImageTk.PhotoImage(
-            Image.open(filename, mode='r').resize([200, 300]))
+            Image.open(filename, mode='r').resize(size))
         # images_list.append(uploaded_image)
         image_label = Label(imageIso, image=uploaded_image)
         image_label.pack()
@@ -198,15 +200,15 @@ def openWindow():
     result_vision = apiText.processImage(new_image)[0] + "(****)" + new_image_name
     # print(result_vision)
     # print(verifier.existsInTruthText(result_vision))
-    if(not verifier.existsInTruthText(result_vision)):
-        try:
-            with open("test1.txt", "a") as file:
-                file.write(result_vision + "\n")
-            messagebox.showinfo("Exito","La imagen: " + new_image_name + " se ha agregado correcctamente a la tabla de verdad en la ultima posicion!")
-        except:
-            messagebox.showerror("Error","No se ha podido guarda la imagen")
-    else:
-        messagebox.showerror("Error", "La imagen ya se encuentra en la tabla de verdad")
+    # if(not verifier.existsInTruthText(result_vision)):
+    try:
+        with open("test1.txt", "a") as file:
+            file.write(result_vision + "\n")
+        messagebox.showinfo("Exito","La imagen: " + new_image_name + " se ha agregado correcctamente a la tabla de verdad en la ultima posicion!")
+    except:
+        messagebox.showerror("Error","No se ha podido guarda la imagen")
+    # else:
+    #     messagebox.showerror("Error", "La imagen ya se encuentra en la tabla de verdad")
 
 
 

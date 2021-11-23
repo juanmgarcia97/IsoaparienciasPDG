@@ -67,20 +67,20 @@ def refactorText(data):
     return finalText
 
 def comparisonStrings(stringA, stringB):
-    resultA = stringA.split('(****)')[0].split(';')
-    resultB = stringB.split('(****)')[0].split(';')
-    finalResult = 0
-    for charA in resultA:
-        initial_value = 0
-        for charB in resultB:
-            match_value = SequenceMatcher(None, charA, charB).ratio()
-            if match_value > initial_value:
-                finalResult = match_value
+    # resultA = stringA.split('(****)')[0].split(';')
+    # resultB = stringB.split('(****)')[0].split(';')
+    # finalResult = 0
+    # for charA in resultA:
+    #     initial_value = 0
+    #     for charB in resultB:
+    #         match_value = SequenceMatcher(None, charA, charB).ratio()
+    #         if match_value > initial_value:
+    #             finalResult = match_value
             # print(charA, charB)
     # print("Prueba:::", stringA, stringB)
-    return finalResult
+    # return finalResult
     # print("Prueba:::", stringA, stringB)
-    # return SequenceMatcher(None, stringA, stringB).ratio()
+    return SequenceMatcher(None, stringA, stringB).ratio()
 
 def findGreaterValues(values, hashMap):
     response = hashMap.get(values[0]) + ": " + str(values[0]) + "\n" + hashMap.get(values[1])+": "+ str(values[1]) + "\n"+ hashMap.get(values[2])+": "+ str(values[2])

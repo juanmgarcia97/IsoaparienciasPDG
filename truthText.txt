@@ -273,3 +273,5 @@ RECICLE;7 '702535"004470;zero;Sprite;SOOM;";ייייייייייויין;;(****)
 & DIC 15 19:49;I!;33;600;32;ULLITROS;de: Ver envase.;IM;NO;32;A;CANCELADO;14;Consumir prefere;DRY;Ginger Ale;Selo de;on Sea Schor a Ginger Ale;dute lo leto. 600 ml;LETORASILE;Calidad;icontec;NTCD;RENDUS;GASEOSAS;;(****)_MG_272.jpg
 03;33;ANADR;MR;32;DRY;Ginger Ale;30;Bebida;Gaseosa;Sabor a;GINGER ALE;CALORÍAS;90 kcal;Contenido;Neto:;300ml;No Retornable;4,5%*;;(****)_MG_273.jpg
 *;2;LA MED;11;H;Välle;55 basador;2000 calorias;FRESH;STAMINE;B3;B6;B12;„;Now;GRESO;BEBIDA CON JUCO SABOR;MANDARINA;500 m;;(****)_MG_274.jpg
+del Valle;Refresco de;PINA Y;MANDARINA;500 ml;CONTIENE 16% DE FRUTA;222;;(****)TEST1.jpg
+del Valle;Refresco de;PINA Y;MANDARINA;500 ml;NE;CONTIENE 16% DE FRUTA;;(****)TEST2.jpg
