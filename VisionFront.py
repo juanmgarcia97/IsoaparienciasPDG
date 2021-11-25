@@ -1,5 +1,6 @@
 from tkinter import *
 from tkinter import filedialog, ttk, messagebox
+import tkinter
 from PIL import ImageTk, Image
 import os
 import PIL
@@ -175,6 +176,15 @@ def deleteImage():
     except:
         messagebox.showinfo("Error al eliminar", "¡No hay nada para eliminar!")
 
+def get_formatted_result_new_image():
+    new_result_vision = text_field.get()
+    try:
+        with open("test1.txt", "a") as file:
+            file.write(new_result_vision + "\n")
+        messagebox.showinfo("Exito","La imagen: " + new_image_name + " se ha agregado correcctamente a la tabla de verdad en la ultima posicion!")
+    except:
+        messagebox.showerror("Error","No se ha podido guarda la imagen")
+    win.destroy()
 
 # Método para abrir nueva ventana para elegir botella.
 def openWindow():
@@ -195,18 +205,24 @@ def openWindow():
     #         "Sin imágenes", "No hay imágenes disponibles en el momento.")
     # comboType.pack()
     # print(list)
+    global win, text_field, new_image_name
     new_image = filedialog.askopenfilename(title="Seleccionar nueva imagen")
     new_image_name = new_image.split('/')[-1]
     result_vision = apiText.processImage(new_image)[0] + "(****)" + new_image_name
+    win = tkinter.Toplevel()
+    win.geometry("800x50")
+    win.wm_title("Ajustar resultado vision")
+
+    text_field = Entry(win, width=200)
+    text_field.insert(0, result_vision)
+    text_field.pack(side=TOP, fill=X)
+
+    b = ttk.Button(win, text="Guardar", command=get_formatted_result_new_image)
+    b.pack(side=TOP)
+    # messagebox.showinfo("Window", result_vision)
     # print(result_vision)
     # print(verifier.existsInTruthText(result_vision))
     # if(not verifier.existsInTruthText(result_vision)):
-    try:
-        with open("test1.txt", "a") as file:
-            file.write(result_vision + "\n")
-        messagebox.showinfo("Exito","La imagen: " + new_image_name + " se ha agregado correcctamente a la tabla de verdad en la ultima posicion!")
-    except:
-        messagebox.showerror("Error","No se ha podido guarda la imagen")
     # else:
     #     messagebox.showerror("Error", "La imagen ya se encuentra en la tabla de verdad")
 
