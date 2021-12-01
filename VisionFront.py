@@ -244,6 +244,7 @@ def openWindow():
 #     labelData.pack()
 
 
+
 # Creación de los botones con las funciones principales de la aplicación.
 frame_image = Frame(frame)
 frame_image.pack(side=LEFT)
