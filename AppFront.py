@@ -4,11 +4,11 @@ import tkinter
 from PIL import ImageTk, Image
 import os
 import PIL
-import cv2 #py -m  pip install opencv-python
+import cv2  # py -m  pip install opencv-python
 import time
 import threading
-import VisionAPIDemo as apiText
-import VisionAPIForms as apiImg
+import VisionAPI as apiText
+import OpenCVORB as apiImg
 import TruthTextUpdater as verifier
 
 # Creación de la pantalla principal de la aplicación.
@@ -65,6 +65,7 @@ def openFile():
 # def call():
 #     time.sleep(2)
 
+
 def findIsoText():
     """Método para buscar las similitudes en los textos usando la imagen cargada."""
     global better_image, resultIso, general_data_frame
@@ -76,15 +77,17 @@ def findIsoText():
     # t.start()
     # Creación de marco para mostrar el resultado de Google Vision.
     general_data_frame = Frame(root, padx=2, pady=2)
-    general_data_frame.pack( expand=1)
+    general_data_frame.pack(expand=1)
 
     canvas = Canvas(general_data_frame)
     canvas.pack(side=LEFT,  expand=1)
 
-    scrolly = ttk.Scrollbar(general_data_frame, orient=VERTICAL, command=canvas.yview)
+    scrolly = ttk.Scrollbar(
+        general_data_frame, orient=VERTICAL, command=canvas.yview)
     scrolly.pack(side=RIGHT, fill=Y)
 
-    scrollx = ttk.Scrollbar(general_data_frame, orient=HORIZONTAL, command=canvas.xview)
+    scrollx = ttk.Scrollbar(
+        general_data_frame, orient=HORIZONTAL, command=canvas.xview)
     scrollx.pack(side=BOTTOM, fill=X)
 
     canvas.configure(yscrollcommand=scrolly.set, xscrollcommand=scrollx.set)
@@ -93,7 +96,7 @@ def findIsoText():
 
     aux_frame = Frame(canvas)
 
-    canvas.create_window((0,0), window=aux_frame, anchor="nw")
+    canvas.create_window((0, 0), window=aux_frame, anchor="nw")
 
     resultIso = LabelFrame(aux_frame, padx=2, pady=2)
     resultIso.pack(side="top", fill="y")
@@ -106,10 +109,9 @@ def findIsoText():
     with open('truthText.txt', encoding='utf-8', errors='ignore') as f:
         lines = f.readlines()
         # print(lines)
-        
-            
+
     # try:
-            # array = lines.split('\n')
+        # array = lines.split('\n')
     for i in lines:
         arr = i.split('(****)')
         img_name = arr[1].rstrip()
@@ -118,7 +120,7 @@ def findIsoText():
             comparison = apiText.comparisonStrings(data, arr[0])
             hm.put(comparison, img_name)
             values.append(comparison)
-        
+
         # values = cv2.sort(values)
     values.sort(reverse=True)
 
@@ -130,20 +132,20 @@ def findIsoText():
         labelData.config(text=text)
         labelData.pack(side=LEFT, fill="x", padx=10, pady=10)
 
-    
-    better_image = os.path.join(os.path.dirname(__file__) + '\Images' , image_names[0])
+    better_image = os.path.join(os.path.dirname(
+        __file__) + '\Images', image_names[0])
     for image in image_names:
-        general_path = os.path.dirname(__file__) + '\Images' 
+        general_path = os.path.dirname(__file__) + '\Images'
         image_path = os.path.join(general_path, image.split(':')[0])
         # print(image.split(' ')[0])
         img = ImageTk.PhotoImage(Image.open(image_path).resize([200, 300]))
         img_label = Label(resultIso, image=img)
         img_label.image = img
         img_label.pack(side=LEFT, fill="x")
-    
-    
+
     # except:
     #     messagebox.showerror("Sin imagen", "¡Debes cargar una imagen primero!")
+
 
 def deleteResultIsoFrame():
     try:
@@ -152,15 +154,17 @@ def deleteResultIsoFrame():
         pass
 
 # Método para buscar las similitudes en las imágenes usando dos imágenes cargadas.
+
+
 def findIsoImg():
     # try:
-        
-        data = apiImg.findIsoappearances(
-            filename1=filename, filename2=better_image)
-        # print(filename, better_image)
-        image = cv2.imshow("", data)
-        labelData = Label(resultIso, image=image)
-        labelData.pack()
+
+    data = apiImg.findIsoappearances(
+        filename1=filename, filename2=better_image)
+    # print(filename, better_image)
+    image = cv2.imshow("", data)
+    labelData = Label(resultIso, image=image)
+    labelData.pack()
     # except:
     #     messagebox.showerror(
     #         "Sin imágenes", "¡Debes cargar dos imágenes para seguir!")
@@ -176,17 +180,21 @@ def deleteImage():
     except:
         messagebox.showinfo("Error al eliminar", "¡No hay nada para eliminar!")
 
+
 def get_formatted_result_new_image():
     new_result_vision = text_field.get()
     try:
         with open("test1.txt", "a") as file:
             file.write(new_result_vision + "\n")
-        messagebox.showinfo("Exito","La imagen: " + new_image_name + " se ha agregado correcctamente a la tabla de verdad en la ultima posicion!")
+        messagebox.showinfo("Exito", "La imagen: " + new_image_name +
+                            " se ha agregado correcctamente a la tabla de verdad en la ultima posicion!")
     except:
-        messagebox.showerror("Error","No se ha podido guarda la imagen")
+        messagebox.showerror("Error", "No se ha podido guarda la imagen")
     win.destroy()
 
 # Método para abrir nueva ventana para elegir botella.
+
+
 def openWindow():
     # global comboType, combo, newWindow
     # newWindow = Toplevel(root)
@@ -208,7 +216,8 @@ def openWindow():
     global win, text_field, new_image_name
     new_image = filedialog.askopenfilename(title="Seleccionar nueva imagen")
     new_image_name = new_image.split('/')[-1]
-    result_vision = apiText.processImage(new_image)[0] + "(****)" + new_image_name
+    result_vision = apiText.processImage(
+        new_image)[0] + "(****)" + new_image_name
     win = tkinter.Toplevel()
     win.geometry("800x50")
     win.wm_title("Ajustar resultado vision")
@@ -227,7 +236,6 @@ def openWindow():
     #     messagebox.showerror("Error", "La imagen ya se encuentra en la tabla de verdad")
 
 
-
 # Método para asignar las imágenes disponibles según el tipo de botella.
 # def pickBottle(event):
 #     global path
@@ -244,7 +252,6 @@ def openWindow():
 #     labelData.pack()
 
 
-
 # Creación de los botones con las funciones principales de la aplicación.
 frame_image = Frame(frame)
 frame_image.pack(side=LEFT)
@@ -256,15 +263,18 @@ add_image.pack(side=LEFT, fill="both", padx=4, pady=4)
 
 frame_iso = Frame(frame)
 frame_iso.pack(side=LEFT)
-find_iso_text = ttk.Button(frame_iso, text="Encontrar similitudes (texto)", command=findIsoText)
+find_iso_text = ttk.Button(
+    frame_iso, text="Encontrar similitudes (texto)", command=findIsoText)
 find_iso_text.pack(fill="both", padx=4, pady=4)
 
-find_iso_img = ttk.Button(frame_iso, text="Encontrar similitudes (img)", command=findIsoImg)
+find_iso_img = ttk.Button(
+    frame_iso, text="Encontrar similitudes (img)", command=findIsoImg)
 find_iso_img.pack(side=LEFT, fill="both", padx=4, pady=4)
 
 frame_options = Frame(frame)
 frame_options.pack(side=LEFT)
-delete_image = ttk.Button(frame_options, text="Eliminar imagen", command=deleteImage)
+delete_image = ttk.Button(
+    frame_options, text="Eliminar imagen", command=deleteImage)
 delete_image.pack(fill="both", padx=4, pady=4)
 
 gen_report = ttk.Button(frame_options, text="Generar reporte")
@@ -272,15 +282,18 @@ gen_report.pack(side=LEFT, fill="both", padx=4, pady=4)
 
 # https://stackoverflow.com/questions/8703496/hash-map-in-python
 
+
 class Node:
     def __init__(self, key, value):
         self.key = key
         self.value = value
         self.next = None
 
+
 class HashMap:
     def __init__(self):
         self.store = [None for _ in range(16)]
+
     def get(self, key):
         index = hash(key) & 15
         if self.store[index] is None:
@@ -294,6 +307,7 @@ class HashMap:
                     n = n.next
                 else:
                     return None
+
     def put(self, key, value):
         nd = Node(key, value)
         index = hash(key) & 15
@@ -312,6 +326,6 @@ class HashMap:
                         n = n.next
                 n.next = nd
 
+
 # Llamado de la ventana principal para que permanezca abierta mientras la aplicación está corriendo.
 root.mainloop()
-
