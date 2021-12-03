@@ -43,19 +43,23 @@ frame.pack(side=TOP, fill=Y)
 
 def openFile():
     global filename, imageIso
-    filename = filedialog.askopenfilename(title="Seleccionar imagen")
-    size = (200, 300)
-    if filename != " ":
-        imageIso = LabelFrame(root, padx=2, pady=2)
-        imageIso.pack(side=TOP)
-        label = Label(imageIso, text=filename.rsplit("/")[-1])
-        label.pack(side=TOP)
-        uploaded_image = ImageTk.PhotoImage(
-            Image.open(filename, mode='r').resize(size))
-        # images_list.append(uploaded_image)
-        image_label = Label(imageIso, image=uploaded_image)
-        image_label.pack()
-        image_label.image = uploaded_image
+    filename = filedialog.askopenfilename(
+        title="Seleccionar imagen", filetypes=[("Imágenes", ".jpg "), ("Imágenes", ".png"), ("Imágenes", ".jpeg")])
+    if not filename:
+        messagebox.showinfo("Sin imagen", "Ninguna imagen fue cargada")
+    else:
+        size = (200, 300)
+        if filename != " ":
+            imageIso = LabelFrame(root, padx=2, pady=2)
+            imageIso.pack(side=TOP)
+            label = Label(imageIso, text=filename.rsplit("/")[-1])
+            label.pack(side=TOP)
+            uploaded_image = ImageTk.PhotoImage(
+                Image.open(filename, mode='r').resize(size))
+            # images_list.append(uploaded_image)
+            image_label = Label(imageIso, image=uploaded_image)
+            image_label.pack()
+            image_label.image = uploaded_image
 
 # def showProgress():
 #     global progressFrame, pb
@@ -69,39 +73,44 @@ def openFile():
 def findIsoText():
     """Método para buscar las similitudes en los textos usando la imagen cargada."""
     global better_image, resultIso, general_data_frame
-    deleteResultIsoFrame()
-    # showProgress()
-    # pb.pack()
-    # pb.start(1)
-    # t = threading.Thread(target=call)
-    # t.start()
-    # Creación de marco para mostrar el resultado de Google Vision.
-    general_data_frame = Frame(root, padx=2, pady=2)
-    general_data_frame.pack(expand=1)
+    try:
+        data = apiText.processImage(filename)[0]
+        deleteResultIsoFrame()
+        # showProgress()
+        # pb.pack()
+        # pb.start(1)
+        # t = threading.Thread(target=call)
+        # t.start()
+        # Creación de marco para mostrar el resultado de Google Vision.
+        general_data_frame = Frame(root, padx=2, pady=2)
+        general_data_frame.pack(expand=1)
 
-    canvas = Canvas(general_data_frame)
-    canvas.pack(side=LEFT,  expand=1)
+        canvas = Canvas(general_data_frame)
+        canvas.pack(side=LEFT,  expand=1)
 
-    scrolly = ttk.Scrollbar(
-        general_data_frame, orient=VERTICAL, command=canvas.yview)
-    scrolly.pack(side=RIGHT, fill=Y)
+        scrolly = ttk.Scrollbar(
+            general_data_frame, orient=VERTICAL, command=canvas.yview)
+        scrolly.pack(side=RIGHT, fill=Y)
 
-    scrollx = ttk.Scrollbar(
-        general_data_frame, orient=HORIZONTAL, command=canvas.xview)
-    scrollx.pack(side=BOTTOM, fill=X)
+        scrollx = ttk.Scrollbar(
+            general_data_frame, orient=HORIZONTAL, command=canvas.xview)
+        scrollx.pack(side=BOTTOM, fill=X)
 
-    canvas.configure(yscrollcommand=scrolly.set, xscrollcommand=scrollx.set)
-    # canvas.bind('<Configure>', lambda e: canvas.configure(scrollyregion=canvas.bbox("all")))
-    # canvas.bind('<Configure>', lambda e: canvas.configure(scrollxregion=canvas.bbox("all")))
+        canvas.configure(yscrollcommand=scrolly.set,
+                         xscrollcommand=scrollx.set)
+        # canvas.bind('<Configure>', lambda e: canvas.configure(scrollyregion=canvas.bbox("all")))
+        # canvas.bind('<Configure>', lambda e: canvas.configure(scrollxregion=canvas.bbox("all")))
 
-    aux_frame = Frame(canvas)
+        aux_frame = Frame(canvas)
 
-    canvas.create_window((0, 0), window=aux_frame, anchor="nw")
+        canvas.create_window((0, 0), window=aux_frame, anchor="nw")
 
-    resultIso = LabelFrame(aux_frame, padx=2, pady=2)
-    resultIso.pack(side="top", fill="y")
-    labelData = Label(resultIso)
-    data = apiText.processImage(filename)[0]
+        resultIso = LabelFrame(aux_frame, padx=2, pady=2)
+        resultIso.pack(side="top", fill="y")
+        labelData = Label(resultIso)
+
+    except:
+        messagebox.showerror("Sin imagen", "¡Debes cargar una imagen primero!")
     hm = HashMap()
     values = []
     image_selected = filename.split('/')[-1]
@@ -157,17 +166,16 @@ def deleteResultIsoFrame():
 
 
 def findIsoImg():
-    # try:
-
-    data = apiImg.findIsoappearances(
-        filename1=filename, filename2=better_image)
-    # print(filename, better_image)
-    image = cv2.imshow("", data)
-    labelData = Label(resultIso, image=image)
-    labelData.pack()
-    # except:
-    #     messagebox.showerror(
-    #         "Sin imágenes", "¡Debes cargar dos imágenes para seguir!")
+    if filename == 0 or better_image == 0:
+        data = apiImg.findIsoappearances(
+            filename1=filename, filename2=better_image)
+        # print(filename, better_image)
+        image = cv2.imshow("", data)
+        labelData = Label(resultIso, image=image)
+        labelData.pack()
+    else:
+        messagebox.showerror(
+            "Sin resultados", "¡Debes encontrar las isoapariencias en texto primero!")
 
 
 # Método para eliminar la(s) imagen(es) cargada(s).
@@ -175,7 +183,8 @@ def deleteImage():
     try:
         imageIso.destroy()
         resultIso.destroy()
-        filename = None
+        filename = 0
+        better_image = 0
         general_data_frame.destroy()
     except:
         messagebox.showinfo("Error al eliminar", "¡No hay nada para eliminar!")
