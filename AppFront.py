@@ -74,40 +74,44 @@ def findIsoText():
     """Método para buscar las similitudes en los textos usando la imagen cargada."""
     global better_image, resultIso, general_data_frame
     try:
-        data = apiText.processImage(filename)[0]
-        deleteResultIsoFrame()
-        # showProgress()
-        # pb.pack()
-        # pb.start(1)
-        # t = threading.Thread(target=call)
-        # t.start()
-        # Creación de marco para mostrar el resultado de Google Vision.
-        general_data_frame = Frame(root, padx=2, pady=2)
-        general_data_frame.pack(expand=1)
+        if filename != 0:
+            data = apiText.processImage(filename)[0]
+            deleteResultIsoFrame()
+            # showProgress()
+            # pb.pack()
+            # pb.start(1)
+            # t = threading.Thread(target=call)
+            # t.start()
+            # Creación de marco para mostrar el resultado de Google Vision.
+            general_data_frame = Frame(root, padx=2, pady=2)
+            general_data_frame.pack(expand=1)
 
-        canvas = Canvas(general_data_frame)
-        canvas.pack(side=LEFT,  expand=1)
+            canvas = Canvas(general_data_frame)
+            canvas.pack(side=LEFT,  expand=1)
 
-        scrolly = ttk.Scrollbar(
-            general_data_frame, orient=VERTICAL, command=canvas.yview)
-        scrolly.pack(side=RIGHT, fill=Y)
+            scrolly = ttk.Scrollbar(
+                general_data_frame, orient=VERTICAL, command=canvas.yview)
+            scrolly.pack(side=RIGHT, fill=Y)
 
-        scrollx = ttk.Scrollbar(
-            general_data_frame, orient=HORIZONTAL, command=canvas.xview)
-        scrollx.pack(side=BOTTOM, fill=X)
+            scrollx = ttk.Scrollbar(
+                general_data_frame, orient=HORIZONTAL, command=canvas.xview)
+            scrollx.pack(side=BOTTOM, fill=X)
 
-        canvas.configure(yscrollcommand=scrolly.set,
-                         xscrollcommand=scrollx.set)
-        # canvas.bind('<Configure>', lambda e: canvas.configure(scrollyregion=canvas.bbox("all")))
-        # canvas.bind('<Configure>', lambda e: canvas.configure(scrollxregion=canvas.bbox("all")))
+            canvas.configure(yscrollcommand=scrolly.set,
+                             xscrollcommand=scrollx.set)
+            # canvas.bind('<Configure>', lambda e: canvas.configure(scrollyregion=canvas.bbox("all")))
+            # canvas.bind('<Configure>', lambda e: canvas.configure(scrollxregion=canvas.bbox("all")))
 
-        aux_frame = Frame(canvas)
+            aux_frame = Frame(canvas)
 
-        canvas.create_window((0, 0), window=aux_frame, anchor="nw")
+            canvas.create_window((0, 0), window=aux_frame, anchor="nw")
 
-        resultIso = LabelFrame(aux_frame, padx=2, pady=2)
-        resultIso.pack(side="top", fill="y")
-        labelData = Label(resultIso)
+            resultIso = LabelFrame(aux_frame, padx=2, pady=2)
+            resultIso.pack(side="top", fill="y")
+            labelData = Label(resultIso)
+        else:
+            messagebox.showerror(
+                "Sin imagen", "¡Debes volver a cargar una imagen!")
 
     except:
         messagebox.showerror("Sin imagen", "¡Debes cargar una imagen primero!")
@@ -166,16 +170,20 @@ def deleteResultIsoFrame():
 
 
 def findIsoImg():
-    if filename == 0 or better_image == 0:
-        data = apiImg.findIsoappearances(
-            filename1=filename, filename2=better_image)
-        # print(filename, better_image)
-        image = cv2.imshow("", data)
-        labelData = Label(resultIso, image=image)
-        labelData.pack()
-    else:
+    try:
+        if filename != None and better_image != None:
+            data = apiImg.findIsoappearances(
+                filename1=filename, filename2=better_image)
+            # print(filename, better_image)
+            image = cv2.imshow("", data)
+            labelData = Label(resultIso, image=image)
+            labelData.pack()
+        else:
+            messagebox.showerror(
+                "Sin resultados", "¡Debes encontrar las isoapariencias en texto primero!")
+    except:
         messagebox.showerror(
-            "Sin resultados", "¡Debes encontrar las isoapariencias en texto primero!")
+            "Sin imagen", "¡Debes cargar una imagen y encontrar isoapariencias en texto primero!")
 
 
 # Método para eliminar la(s) imagen(es) cargada(s).
@@ -183,8 +191,8 @@ def deleteImage():
     try:
         imageIso.destroy()
         resultIso.destroy()
-        filename = 0
-        better_image = 0
+        filename = None
+        better_image = None
         general_data_frame.destroy()
     except:
         messagebox.showinfo("Error al eliminar", "¡No hay nada para eliminar!")

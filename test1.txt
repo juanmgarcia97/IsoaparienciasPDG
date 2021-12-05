@@ -16,3 +16,4 @@ LEVEREST;Coca Cola;des;ME;REGISTERED TRADE MARK;BESER;SBS;alamy;Image ID: F8ARG9
 3;Mora;33;Chi;30;CON;GAS;8%;de Pulpa;de Fruta;Natural;Cont. Neto;Net Contents;500 ml;(16,66 A 02);REFRESCO DE FRUTA CARBONATADO VARIEDAD MORA;CON JUGO DE FRUTA NATURAL;;(****)_MG_11.jpg
 .;**;23;pa;co;3;61;30;Resogger;VIVE EL;PONY;FUTEOL;XXIX;Fabricado por Bavar;;(****)_MG_0.jpg
 VIVE EL;PONY;FUTBOL;XXIX;PRUEBA(****)_MG_0.jpg
+Colombiana;la nuestra;TU;SABOR CON;CERO;CALORÍAS(****)IMG_8712.JPG
