@@ -275,3 +275,7 @@ Ginger Ale;Bebida;Gaseosa;Sabor a;GINGER ALE;CALORÍAS;;Contenido;300ml;No Retor
 del Valle;2000 calorias;FRESH;B3;B6;B12;GRESO;BEBIDA CON JUGO SABOR;MANDARINA;500 m;;(****)_MG_274.jpg
 del Valle;Refresco de;PINA Y;MANDARINA;500 ml;CONTIENE 16% DE FRUTA;222;;(****)TEST1.jpg
 del Valle;Refresco de;PINA Y;MANDARINA;500 ml;NE;CONTIENE 16% DE FRUTA;;(****)TEST2.jpg
+Calle 30;CONTENIDO NETO;SABOR A COLA Y FRUTOS ROJOS(****)_MG_25.jpg
+alth Drink;GRAPE;ALOE FILL;ALOE VERA DRINK(****)_MG_30.jpg
+ZUMO(****)_MG_36.jpg
+SAN BENEDETTO;histettu Italiassa:;Acqua Minerale;de stabilimento: Viale(****)_MG_27.jpg

@@ -201,7 +201,7 @@ def deleteImage():
 def get_formatted_result_new_image():
     new_result_vision = text_field.get()
     try:
-        with open("test1.txt", "a") as file:
+        with open("truthText.txt", "a") as file:
             file.write(new_result_vision + "\n")
         messagebox.showinfo("Exito", "La imagen: " + new_image_name +
                             " se ha agregado correcctamente a la tabla de verdad en la ultima posicion!")
